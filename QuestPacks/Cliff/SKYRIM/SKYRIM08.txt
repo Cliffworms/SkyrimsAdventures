@@ -1,0 +1,356 @@
+Quest: SKYRIM08
+DisplayName: Rescue Mission
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    %lev, we've received a desperate missive.
+<ce>                    A citizen here in %cn has been
+<ce>                    kidnapped. The Fighters Guild has been
+<ce>                    asked for assistance, and we shall answer.
+<ce>                    Particularly when the pay is as good as
+<ce>                    this. Do you want this contract?
+
+RefuseQuest:  [1001]
+<ce>                    Then gold and glory shall not be yours.
+<ce>                    Hey! %nam? Does that interest you?
+
+AcceptQuest:  [1002]
+<ce>                    Right. We have been given =timer_ days
+<ce>                    to rescue _dummy_ who's been
+<ce>                    taken to... where again?
+<ce>
+<ce>                    Hey, %nam! Can you read me
+<ce>                    that part of the missive again?
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    This is _dummy_, I believe?
+<ce>                    This is good to hear. You've brought honor
+<ce>                    to the Fighters Guild and yourself.
+<ce>                    _dummy_, stay here. I will send
+<ce>                    for your relatives.
+<ce>
+<ce>                    "I'm ever so grateful, %pcn." says
+<ce>                    _dummy_, smiling.
+
+QuestorPostsuccess:  [1008]
+_dummy_ sends %g3 best wishes. You remember %g2, right? The fella you rescued?
+
+
+Message: 1010
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn_ to rescue
+_dummy_ who's been kidnapped
+by bandits. I have =timer_ days to
+return with %g2 to ___questgiver_.
+
+Message: 1011
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn2_ to rescue
+_dummy_ who's been paralyzed
+and dragged by giant spiders. I have =timer_ days
+to return with %g2 to ___questgiver_.
+
+Message: 1012
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn3_ to rescue
+_dummy_ who's been kidnapped by
+harpies. I have =timer_ days to return
+with %g2 to ___questgiver_.
+
+Message: 1013
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn4_ to rescue
+_dummy_ who's been kidnapped by
+vampires. I have =timer_ days to return
+with %g2 to ___questgiver_.
+
+Message: 1014
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn5_ to rescue
+_dummy_ who's been kidnapped by
+warlocks. I have =timer_ days to return
+with %g2 to ___questgiver_.
+
+Message: 1020
+<ce>"__dgn_. That bandit hideout to the %di."
+<ce>
+<ce>Right. Good luck, %lev. Don't screw up.
+
+Message: 1021
+<ce>"__dgn2_. That spider-infested cave
+<ce>to the %di."
+<ce>
+<ce>Right. Good luck, %lev. Don't screw up.
+
+Message: 1022
+<ce>"__dgn3_. That harpy-infested cave
+<ce>to the %di."
+<ce>
+<ce>Right. Good luck, %lev. Don't screw up.
+
+Message: 1023
+<ce>"__dgn4_. That vampire coven to the
+<ce>%di."
+<ce>
+<ce>Right. Good luck, %lev. Don't screw up.
+
+Message: 1024
+<ce>"__dgn5_. That warlock lab to the %di."
+<ce>
+<ce>Right. Good luck, %lev. Don't screw up.
+
+Message: 1030
+<ce>Never should have come here!
+<--->
+<ce>Lookee here. Looks like we got ourselves a hero.
+<--->
+<ce>You picked a bad time to get lost, friend.
+<--->
+<ce>Now ain't this a surprise.
+<--->
+<ce>Time to die, hero!
+<--->
+<ce>Go ahead, try and fight back!
+<--->
+<ce>Die already so I can take your stuff!
+<--->
+<ce>Whatcha gonna do? Huh? Whatcha gonna do?
+<--->
+<ce>Gonna split your belly like an old woman's purse!
+<--->
+<ce>Gonna rip you... open!
+<--->
+<ce>You'll be so much easier to rob when you're dead...
+<--->
+<ce>Tell you what. You start running so I can stab you in the back.
+<--->
+<ce>Can't wait to count out your coin...
+
+Message: 1031
+<ce>Ohh... but I will have your blood...
+<--->
+<ce>My thirst will be sated...
+<--->
+<ce>Oh, I can smell your blood...
+<--->
+<ce>Bleed for me, mortal!
+<--->
+<ce>Just a taste!
+<--->
+<ce>Hssssss!
+<--->
+<ce>Is that your best, mortal?
+<--->
+<ce>Bleed and die!
+<--->
+<ce>Just a taste...
+<--->
+<ce>You're mine, mortal!
+<--->
+<ce>You dare to interfere with me?
+<--->
+<ce>I knew I smelled mortal blood!
+<--->
+<ce>Now your blood is mine!
+<--->
+<ce>Pah, your blood is foul.
+<--->
+<ce>Soon... soon your blood will be mine...
+<--->
+<ce>Your blood calls me...
+<--->
+<ce>Why fight me? Your blood is already mine.
+<--->
+<ce>Your kind are finished.
+<--->
+<ce>Mortal fool, you can't stop us.
+<--->
+<ce>We own the night, fool.
+<--->
+<ce>The night belongs to us.
+<--->
+<ce>The sun cannot protect you any more!
+<--->
+<ce>Behold the power of Night!
+<--->
+<ce>Stop struggling. I'll give you a swift and beautiful death.
+<--->
+<ce>I'll drink you dry, mortal!
+<--->
+<ce>I love it when dinner walks right into my arms.
+<--->
+<ce>The prey is here!
+<--->
+<ce>You're mine!
+<--->
+<ce>Die!
+<--->
+<ce>No... my blood is strong...
+<--->
+<ce>Death is nothing to me...
+<--->
+<ce>I do not fear death.
+<--->
+<ce>Never... not yet...
+
+Message: 1032
+<ce>Never should have come here!
+<--->
+<ce>Lookee here. Looks like we got ourselves a hero.
+<--->
+<ce>You picked a bad time to get lost, friend.
+<--->
+<ce>Now ain't this a surprise.
+<--->
+<ce>Time to die, hero!
+<--->
+<ce>Go ahead, try and fight back!
+<--->
+<ce>Die already so I can dissect your corpse!
+<--->
+<ce>Gonna split your belly like an old woman's purse!
+<--->
+<ce>Gonna rip you... open!
+<--->
+<ce>You'll be so much easier to dissect when you're dead...
+<--->
+<ce>Tell you what. You start running so I can cast you in the back.
+
+Message: 1040
+<ce>You've been sent to rescue me? Thank %god!
+<ce>Let's move!
+
+Message: 1050
+<ce>It has been more than =timer_ days since
+<ce>you were tasked with _dummy_'s rescue.
+<ce>By now, %g has either been moved somewhere
+<ce>else or executed.
+
+Message: 1060
+<ce>            _dummy_ says :
+<ce>            "Listen, I know my way from here.
+<ce>            Thanks for your help, %pcn."
+<ce>
+<ce>            _dummy_ hurries away.
+<--->
+<ce>            _dummy_ says %g knows the way to
+<ce>            ___questgiver_ from here and
+<ce>            leaves you, heading %di.
+
+QBN:
+Item _reward_ gold
+
+Person _questgiver_ group Questor
+Person _dummy_ group Resident1
+
+Place _dgn_ remote dungeon2
+Place _dgn2_ remote dungeon12
+Place _dgn3_ remote dungeon10
+Place _dgn4_ remote dungeon8
+Place _dgn5_ remote dungeon9
+
+Foe _foe_ is Warrior
+Foe _foe2_ is Spider
+Foe _foe3_ is Harpy
+Foe _foe4_ is Vampire
+Foe _foe5_ is Sorcerer
+
+Clock _timer_ 25.00:00 35.00:00
+
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+    pick one of _loc1_ _loc2_ _loc3_ _loc4_ _loc5_
+
+_loc1_ task:
+	log 1010 step 0
+    reveal _dgn_
+    place npc _dummy_ at _dgn_
+    place foe _foe_ at _dgn_
+    say 1020
+
+_loc2_ task:
+	log 1011 step 0
+    reveal _dgn2_
+    place npc _dummy_ at _dgn2_
+    place foe _foe2_ at _dgn2_
+    say 1021
+
+_loc3_ task:
+	log 1012 step 0
+    reveal _dgn3_
+    place npc _dummy_ at _dgn3_
+    place foe _foe3_ at _dgn3_
+    say 1022
+
+_loc4_ task:
+	log 1013 step 0
+    reveal _dgn4_
+    place npc _dummy_ at _dgn4_
+    place foe _foe4_ at _dgn4_
+    say 1023
+
+_loc5_ task:
+	log 1014 step 0
+    reveal _dgn5_
+    place npc _dummy_ at _dgn5_
+    place foe _foe5_ at _dgn5_
+    say 1024
+
+_injured_ task:
+    injured _foe_
+    say 1030
+
+_injured2_ task:
+    injured _foe4_
+    say 1031
+
+_injure3_ task:
+    injured _foe5_
+    say 1032
+
+_dummyclicked_ task:
+    clicked npc _dummy_
+
+_accompany_ task:
+    when _dummyclicked_
+    say 1040
+    add _dummy_ face
+    hide npc _dummy_
+
+_qgiverclicked_ task:
+    clicked npc _questgiver_
+
+_success_ task:
+    when _qgiverclicked_ and _accompany_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _qgiverclicked_ and not _accompany_
+    clear _qgiverclicked_ _clearclick_
+
+_fail1_ task:
+    when _timer_ and not _accompany_
+    say 1050
+    end quest
+
+_fail2_ task:
+    when _timer_ and _accompany_
+    say 1060
+    end quest

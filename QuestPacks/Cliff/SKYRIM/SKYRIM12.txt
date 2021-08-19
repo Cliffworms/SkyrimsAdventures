@@ -1,0 +1,219 @@
+Quest: SKYRIM12
+DisplayName: Enchanting Pickup
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>            There's a small task our enchanter needs help with.
+<ce>            I think it involves fetching an item from a client.
+<ce>            Feel free to decline if it doesn't interest you.
+<--->
+<ce>            _dummy_, our enchanter, requested the aid of
+<ce>            one of our members to pick up something that needs
+<ce>            to be enchanted. Does such a task interests in any
+<ce>            way?
+
+RefuseQuest:  [1001]
+<ce>            Do not worry, I am not disappointed. I guess an
+<ce>            apprentice will be able to take care of this.
+<--->
+<ce>            I agree with you, %lev. Our enchanter can find his
+<ce>            own courier, right?
+
+AcceptQuest:  [1002]
+<ce>            Then go speak to _dummy_, who should be
+<ce>            around here somewhere.
+<--->
+<ce>            _dummy_ will be glad. I believe %g's still
+<ce>            around. I saw %g2 an hour ago.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>            Ah, yes. Thank you. I'll get to work on this
+<ce>            right away.
+<--->
+<ce>            I'll add it to the list of things I need to
+<ce>            take care of. Thank you.
+
+RumorsDuringQuest:   [1005]
+
+
+RumorsPostFailure:   [1006]
+
+
+RumorsPostSuccess:   [1007]
+
+
+QuestorPostsuccess:  [1008]
+                
+
+QuestorPostfailure:  [1009]
+                
+
+Message: 1010
+%qdt
+Guildmagister _questgiver_ of the Mages
+Guild in ___questgiver_ asked me to help
+_dummy_ about fetching an item for %g2.
+
+Message: 1011
+%qdt
+_dummy_, an enchanter in __mg_'s
+Mages Guild, needs an item picked up from _client_
+in __res_ so that it can be enchanted.
+The item needs to be delivered in =timer_ days or less.
+
+Message: 1020
+<ce>                Were you sent by _questgiver_? Good.
+<ce>                I've got a client, _client_ in
+<ce>                __res_, who wants me to do some enchanting.
+<ce>                I need you to pick-up %g3 item for me.
+<ce>                Be quick about it, will you? This is a good way
+<ce>                for the Mages Guild to bring in some money.
+<ce>                =timer_ days should be more than enough.
+<--->
+<ce>                Ah, good to see that _questgiver_ accepted
+<ce>                my request. There's more enchanting to be done.
+<ce>                You can acquire whatever it is that _client_
+<ce>                in __res_ wants me to enchant and bring
+<ce>                it back here. Then I'll take care of the rest.
+<ce>                Please return with the item in =timer_ days.
+
+Message: 1030
+<ce>                You are from the Mages Guild? I've already sent
+<ce>                instructions, you just need to make sure this
+<ce>                arrives in one piece.
+<--->
+<ce>                Ah, you're from the Mages Guild? I've been waiting
+<ce>                for you. Please make sure this arrives in a timely
+<ce>                manner. And don't scratch it up.
+<--->
+<ce>                Oh, good. I've been waiting for you. Here you go,
+<ce>                it's all ready. Now, _dummy_ knows what
+<ce>                I want. I'm hoping he can get it done quickly.
+<--->
+<ce>                It's about time someone arrived. Here, make sure
+<ce>                this is handled properly.
+<--->
+<ce>                Oh yes, I did ask _dummy_ for %g3 services.. Here
+<ce>                you go. I hope this can be ready soon.
+<--->
+<ce>                You're the courier sent by _dummy_? Let's
+<ce>                keep our voices down, all right? Just make sure this
+<ce>                gets there.
+
+Message: 1040
+<ce>                It has been more than =timer_ days since you were
+<ce>                asked by _dummy_, an enchanter in __mg_'s
+<ce>                Mages Guild, to acquire an item from a client.
+
+Message: 1041
+<ce>                It has been more than =timer_ days since you were
+<ce>                asked by _dummy_, an enchanter in __mg_'s
+<ce>                Mages Guild, to bring _client_'s item.
+<ce>                Since it has been some time, you consider it
+<ce>                to be rightfully yours.
+
+
+QBN:
+Item _reward_ gold range 30 to 80
+Item _item1_ weapon
+Item _item2_ armor
+Item _item3_ mens_clothing
+Item _item4_ womens_clothing
+Item _item5_ gem
+
+Person _questgiver_ group Questor male
+Person _dummy_ faction The_Crafters
+Person _client_ group Resident1
+
+Place _res_ remote house
+Place _mg_ local magery
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+variable _sc1_
+variable _sc2_
+variable _sc3_
+variable _sc4_
+variable _sc5_
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place npc _client_ at _res_
+    place npc _dummy_ at _mg_
+    pick one of _sc1_ _sc2_ _sc3_ _sc4_ _sc5_
+
+_dummyclicked_ task:
+    clicked npc _dummy_ say 1020
+	log 1011 step 1 
+
+_clientclicked_ task:
+    clicked npc _client_ say 1030
+
+_getitem1_ task:
+    when _clientclicked_ and _sc1_
+    get item _item1_
+
+_getitem2_ task:
+    when _clientclicked_ and _sc2_
+    get item _item2_
+
+_getitem3_ task:
+    when _clientclicked_ and _sc3_
+    get item _item3_
+
+_getitem4_ task:
+    when _clientclicked_ and _sc4_
+    get item _item4_
+
+_getitem5_ task:
+    when _clientclicked_ and _sc5_
+    get item _item5_
+
+_haveitem_ task:
+    when _getitem1_ or _getitem2_ or _getitem3_ or _getitem4_ or _getitem5_
+
+_toting1_ task:
+    toting _item1_ and _dummy_ clicked
+    give pc _reward_
+    end quest
+
+_toting2_ task:
+    toting _item2_ and _dummy_ clicked
+    give pc _reward_
+    end quest
+
+_toting3_ task:
+    toting _item3_ and _dummy_ clicked
+    give pc _reward_
+    end quest
+
+_toting4_ task:
+    toting _item4_ and _dummy_ clicked
+    give pc _reward_
+    end quest
+
+_toting5_ task:
+    toting _item5_ and _dummy_ clicked
+    give pc _reward_
+    end quest
+
+_fail1_ task:
+    when _timer_ and not _haveitem_
+    say 1040
+    end quest
+
+_fail2_ task:
+    when _timer_ and _haveitem_
+    say 1041
+    make _item1_ permanent
+    make _item2_ permanent
+    make _item3_ permanent
+    make _item4_ permanent
+    make _item5_ permanent
+    end quest

@@ -1,0 +1,201 @@
+Quest: SKYRIM07
+DisplayName: Preemptive Strike
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    Greetings, %lev. It appears I've found
+<ce>                    a beast hiding from the light of day.
+<ce>                    A vampire. We need to destroy it before
+<ce>                    it turns its comrades into a brood of
+<ce>                    vampires. Do you wish to unleash Arkay's
+<ce>                    fury on this abomination?
+
+RefuseQuest:  [1001]
+<ce>                    Then I shall find a brave soul among
+<ce>                    the Knights of the Circle to undertake
+<ce>                    this task.
+
+AcceptQuest:  [1002]
+<ce>                    Thank Arkay and thank you. The vampire
+<ce>                    is known as =vampire_ and it is holed
+<ce>                    up with a group of unlawful criminals.
+<ce>                    What was the place again?
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    Excellent. That's one less beast and nest
+<ce>                    of broodlings we needn't worry about any
+<ce>                    longer.
+
+QuestorPostsuccess:  [1008]
+Thank Arkay He sent you to us for dealing with the vile =vampire_. How can I help you, child?
+
+QuestorPostFailure:   [1009]
+I know you have tried your best when dealing with the vampire, =vampire_. Fear not, we will hunt down that abomination wherever it dwells.
+
+Message: 1010
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has tasked me with the
+hunt of =vampire_ before it turns its
+comrades in __dgn_ into
+a brood of vampires. I have =timer_ days to
+do so before _questgiver_
+considers that I have fallen in battle.
+
+Message: 1011
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has tasked me with the
+hunt of =vampire_ before it turns its
+comrades in __dgn2_ into
+a brood of vampires. I have =timer_ days to
+do so before _questgiver_
+considers that I have fallen in battle.
+
+Message: 1020
+<ce>Ah, yes. __dgn_ to the %di. =vampire_
+<ce>is part of a bandit group, you see.
+<ce>Should =timer_ days pass before you
+<ce>return, I shall consider that Arkay
+<ce>has choosen you to complete your Circle.
+<ce>May He protect and guide you, %lev.
+
+Message: 1021
+<ce>Ah, yes. __dgn2_ to the %di. =vampire_
+<ce>is part of a group of rogue wizards, you see.
+<ce>Should =timer_ days pass before you
+<ce>return, I shall consider that Arkay
+<ce>has choosen you to complete your Circle.
+<ce>May He protect and guide you, %lev.
+
+Message: 1030
+<ce>Ohh... but I will have your blood...
+<--->
+<ce>My thirst will be sated...
+<--->
+<ce>Oh, I can smell your blood...
+<--->
+<ce>Bleed for me, mortal!
+<--->
+<ce>Just a taste!
+<--->
+<ce>Hssssss!
+<--->
+<ce>Is that your best, mortal?
+<--->
+<ce>Bleed and die!
+<--->
+<ce>Just a taste...
+<--->
+<ce>You're mine, mortal!
+<--->
+<ce>You dare to interfere with me?
+<--->
+<ce>I knew I smelled mortal blood!
+<--->
+<ce>Now your blood is mine!
+<--->
+<ce>Pah, your blood is foul.
+<--->
+<ce>Soon... soon your blood will be mine...
+<--->
+<ce>Your blood calls me...
+<--->
+<ce>Why fight me? Your blood is already mine.
+<--->
+<ce>Your kind are finished.
+<--->
+<ce>Mortal fool, you can't stop us.
+<--->
+<ce>We own the night, fool.
+<--->
+<ce>The night belongs to us.
+<--->
+<ce>The sun cannot protect you any more!
+<--->
+<ce>Behold the power of Night!
+<--->
+<ce>Stop struggling. I'll give you a swift and beautiful death.
+<--->
+<ce>I'll drink you dry, mortal!
+<--->
+<ce>I love it when dinner walks right into my arms.
+<--->
+<ce>The prey is here!
+<--->
+<ce>You're mine!
+<--->
+<ce>Die!
+<--->
+<ce>No... my blood is strong...
+<--->
+<ce>Death is nothing to me...
+<--->
+<ce>I do not fear death.
+<--->
+<ce>Never... not yet...
+
+Message: 1040
+<ce>You have slain the abomination known
+<ce>as =vampire_ in the name of Arkay.
+
+Message: 1050
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Order of Arkay with the hunt of the
+<ce>vampire known as =vampire_
+
+QBN:
+Item _reward_ gold
+
+Person _questgiver_ group Questor
+
+Place _dgn_ remote dungeon2
+Place _dgn2_ remote dungeon9
+
+Foe _vampire_ is Vampire
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+--	Quest start-up:
+	start timer _timer_
+    pick one of _loc1_ _loc2_
+
+_loc1_ task:
+	log 1010 step 0
+    reveal _dgn_
+    place foe _vampire_ at _dgn_
+    say 1020
+
+_loc2_ task:
+	log 1011 step 0
+    reveal _dgn2_
+    place foe _vampire_ at _dgn2_
+    say 1021
+
+_injured_ task:
+    injured _vampire_
+    say 1030
+
+_slain_ task:
+    killed _vampire_  
+    say 1040
+
+_qgiverclicked_ task:
+    clicked npc _questgiver_
+
+_success_ task:
+    when _qgiverclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _qgiverclicked_ and not _slain_
+    clear _qgiverclicked_ _clearclick_
+
+_timer_ task:
+    say 1050
+    end quest

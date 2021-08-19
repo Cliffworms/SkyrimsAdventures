@@ -1,0 +1,358 @@
+Quest: SKYRIM13
+DisplayName: The Numbers Job
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>            Most of the establishments in %reg keep
+<ce>            their transactions recorded within business ledgers.
+<ce>            Your job would be to change the numbers in those
+<ce>            books so the shortfalls from our other jobs look
+<ce>            legit. Feel like doing a bit of writin'?
+<--->
+<ce>            _loc_ is a regular target for the Guild.
+<ce>            They keep pretty shoddy records, so the job should be
+<ce>            a cinch. You in?
+<--->
+<ce>            We want to waylay a shipment on the way from
+<ce>            _loc_ without them even noticin' anything
+<ce>            went missin'. Want the job?
+<--->
+<ce>            Yeah, sure. Got a business on tap that could use a
+<ce>            little number rearrangin'. What do you say?
+<--->
+<ce>            Okay, got just the one for you. Ledger's just beggin'
+<ce>            to be changed and the Guild could use the coin. How
+<ce>            about it?
+<--->
+<ce>            Have a client lookin' to have a rival's business ledger
+<ce>            changed. Don't know the reason, and don't want to know.
+<ce>            Count you in?
+<--->
+<ce>            Got a personal request from the Crow on this numbers job.
+<ce>            He says we may hit 'em hard later, and wants to prep
+<ce>            their books. Help us out?
+<--->
+<ce>            These marks keep their ledger all neat and tidy, but
+<ce>            they're ripe for some change if you know what I mean.
+<ce>            Take it?
+<--->
+<ce>            All right. Got a simple one. Just get in, change the books
+<ce>            and be back in time for last call. So how's about it?
+
+RefuseQuest:  [1001]
+<ce>            Don't even give it a second thought. Maybe next time.
+<--->
+<ce>            Sure, no problem. We'll find someone else to do it.
+<--->
+<ce>            Your not winnin' points with me with that attitude.
+<--->
+<ce>            When you find your nerves, then we'll talk.
+<--->
+<ce>            Fine, but you're not gettin' any wealthier by weaslin'
+<ce>            out of everythin' I offer you.
+<--->
+<ce>            You're not going to get richer with that attitude.
+<--->
+<ce>            You need to bloody well get your priorities straight
+<ce>            if you want to make it around here.
+<--->
+<ce>            Too bad, looks like I need to find someone else to
+<ce>            take care of business.
+<--->
+<ce>            If you think you'll make your fortune kickin' around
+<ce>            the guild all day, that's where your wrong.
+<--->
+<ce>            And here I thought you were a master criminal.
+<ce>            Guess I was wrong.
+
+AcceptQuest:  [1002]
+<ce>            Great. Visit _loc_ in __loc_ and find
+<ce>            the ledger. Change the numbers and get back
+<ce>            here. Like I said, no killin' and don't get
+<ce>            caught. I'm giving ya =timer_ days for this job.
+<ce>            Watch yourself out there, %lev.
+<--->
+<ce>            Finally, someone with backbone. Visit
+<ce>            _loc_ in __loc_ and find the
+<ce>            ledger. Change the numbers and get back here.
+<ce>            Like I said, no killin' and don't get caught.
+<ce>            I'm giving ya =timer_ days for this job.
+<ce>            Watch yourself out there, %lev.
+<--->
+<ce>            Now that's what I like to hear. Visit
+<ce>            _loc_ in __loc_ and find the
+<ce>            ledger. Change the numbers and get back here.
+<ce>            Like I said, no killin' and don't get caught.
+<ce>            I'm giving ya =timer_ days for this job.
+<ce>            Off you go.
+<--->
+<ce>            Keep this up and you'll be rich enough to retire
+<ce>            before you know it. Visit _loc_ in
+<ce>            __loc_ and find the ledger. Change the
+<ce>            numbers and get back here. Like I said, no killin'
+<ce>            and don't get caught. I'm giving ya =timer_ days for
+<ce>            this job. Good luck.
+<--->
+<ce>            Visit _loc_ in __loc_ and find
+<ce>            the ledger. Change the numbers and get back
+<ce>            here. You get caught, and we've never heard
+<ce>            of you. I'm giving ya =timer_ days for this job.
+<ce>            Watch yourself out there, %lev.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>            I hardly noticed you were gone. Got your share of the
+<ce>            spoils right here, %lev.
+<--->
+<ce>            Got all your gold ready, %lev. You can count every
+<ce>            coin, it's all there.
+<--->
+<ce>            A pleasure as always, boss. Here's your payment.
+<--->
+<ce>            Good job. Now here's your part of the deal.
+<--->
+<ce>            Here's your share. Well done.
+<--->
+<ce>            Nicely done. Here's your share.
+<--->
+<ce>            And here's the spoils. Plenty more where this came
+<ce>            from!
+<--->
+<ce>            I can pat you on the back all day, but coin's coin,
+<ce>            right? Here ye go.
+<--->
+<ce>            This kind of work suits you... and is going to end
+<ce>            up makin' you rich.
+<--->
+<ce>            Couldn't have done it better myself.
+<ce>            Here's your coin.
+<--->
+<ce>            If you don't watch it, I may actually start to
+<ce>            respect you. Job well done.
+
+RumorsDuringQuest:   [1005]
+
+
+RumorsPostFailure:   [1006]
+
+
+RumorsPostSuccess:   [1007]
+
+
+QuestorPostsuccess:  [1008]
+We made a good bunch of gold thanks to your work at _loc_. Anything ye need?
+
+QuestorPostfailure:  [1009]
+I didn't sleep well last night, thanks to your botched job. You know, the one about _loc_'s ledger.
+
+Message: 1010
+%qdt
+I've been told by _questgiver_ of
+the Thieves Guild in __questgiver_ 
+to forge false entries in the ledger at
+_loc_ in __loc_.
+I need to complete this job without killing
+any of the location's residents or getting
+caught. 
+
+Message: 1020
+<ce>The ledger should be somewhere around
+<ce>_loc_. Changing the numbers
+<ce>while the owner is around may be more
+<ce>difficult...
+
+Message: 1030
+<ce>You have changed the numbers without
+<ce>attracting attention.
+
+Message: 1040
+<ce>The shop's owner suddenly turns the corner,
+<ce>seeing you meddling with the ledger.
+<ce>
+<ce>"Guards! GUARDS!" he screams to a nearby
+<ce>patrol of city guards.
+
+Message: 1050
+<ce>Gettin' pinched doesn't cut it with our clients.
+<ce>If you want to get paid next time, stay clean.
+<--->
+<ce>I had to use your pay to smooth things over with
+<ce>the client. They didn't want to be associated
+<ce>with a criminal. Next time, don't get caught.
+<--->
+<ce>You needed to do this clean and quiet, and you
+<ce>failed. Now we need to use your payment to cover
+<ce>your mistake.
+
+Message: 1060
+<ce>It has been more than =timer_ days since you
+<ce>were tasked with changing the numbers in
+<ce>_loc_'s ledger.
+
+QBN:
+Item _reward_ gold
+Item _ledger_ book
+
+Person _questgiver_ group Questor male
+
+Place _loc_ remote generalstore
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+variable _msgshown_
+variable _inside_
+variable _getitem_
+variable _caughtyes_
+variable _caughtno_
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place item _ledger_ at _loc_
+    pc at _loc_ set _inside_
+    have _ledger_ set _getitem_
+
+_day_ task:
+    daily from 06:00 to 23:00
+
+_stealth00_ task:
+    when skill Stealth is at least 0
+
+_stealth10_ task:
+    when skill Stealth is at least 10
+
+_stealth20_ task:
+    when skill Stealth is at least 20
+
+_stealth30_ task:
+    when skill Stealth is at least 30
+
+_stealth40_ task:
+    when skill Stealth is at least 40
+
+_stealth50_ task:
+    when skill Stealth is at least 50
+
+_stealth60_ task:
+    when skill Stealth is at least 60
+
+_stealth70_ task:
+    when skill Stealth is at least 70
+
+_stealth00to10_ task:
+    when _stealth00_ and not _stealth10_
+
+_stealth10to20_ task:
+    when _stealth10_ and not _stealth20_
+
+_stealth20to30_ task:
+    when _stealth20_ and not _stealth30_
+
+_stealth30to40_ task:
+    when _stealth30_ and not _stealth40_
+
+_stealth40to50_ task:
+    when _stealth40_ and not _stealth50_
+
+_stealth50to60_ task:
+    when _stealth50_ and not _stealth60_
+
+_stealth60to100_ task:
+    when _stealth60_
+
+_chancecaughtday01_ task:
+    when _day_ and _getitem_ and _stealth70_
+    pick one of _caughtno_
+
+_chancecaughtday02_ task:
+    when _day_ and _getitem_ and _stealth60to100_
+    pick one of _caughtyes_ _caughtno_ _caughtno_ _caughtno_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday03_ task:
+    when _day_ and _getitem_ and _stealth50to60_
+    pick one of _caughtyes_ _caughtyes_ _caughtno_ _caughtno_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday04_ task:
+    when _day_ and _getitem_ and _stealth40to50_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday05_ task:
+    when _day_ and _getitem_ and _stealth30to40_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday06_ task:
+    when _day_ and _getitem_ and _stealth20to30_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_ _caughtno_
+
+_chancecaughtday07_ task:
+    when _day_ and _getitem_ and _stealth10to20_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_    
+
+_chancecaughtday08_ task:
+    when _day_ and _getitem_ and _stealth00to10_
+    pick one of _caughtyes_
+
+_chancecaughtnight01_ task:
+    when not _day_ and _getitem_ and _stealth40_
+    pick one of _caughtno_
+
+_chancecaughtnight03_ task:
+    when not _day_ and _getitem_ and _stealth30to40_
+    pick one of _caughtyes_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtnight04_ task:
+    when not _day_ and _getitem_ and _stealth20to30_
+    pick one of _caughtyes_ _caughtyes_ _caughtno_ _caughtno_
+
+_chancecaughtnight05_ task:
+    when not _day_ and _getitem_ and _stealth10to20_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_
+
+_chancecaughtnight06_ task:
+    when not _day_ and _getitem_ and _stealth00to10_
+    pick one of _caughtyes_
+
+_msgday_ task:
+    when _day_ and _inside_ and not _msgshown_
+    say 1020
+    setvar _msgshown_
+
+_haltyes_ task:
+    when _getitem_ and _caughtyes_
+    take _ledger_ from pc
+    say 1040
+    setplayercrime Theft
+    spawncityguards immediate
+
+_haltno_ task:
+    when _getitem_ and _caughtno_
+    take _ledger_ from pc
+    say 1030
+
+_haltex_ task:
+    when _haltyes_ and not _inside_
+    spawncityguards immediate
+
+_success_ task:
+    when _qgclicked_ and _getitem_ and _caughtno_
+    give pc _reward_
+    end quest
+
+_fail_ task:
+    when _qgclicked_ and _getitem_ and _caughtyes_
+    say 1050
+    end quest
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_clearqggclicked_ task:
+    when _qgclicked_ and not _getitem_
+    clear _qgclicked_ _clearqggclicked_
+ 
+_timer_ task:
+    say 1060
+    end quest

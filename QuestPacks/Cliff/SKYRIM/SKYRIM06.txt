@@ -1,0 +1,282 @@
+Quest: SKYRIM06
+DisplayName: Family Heirloom
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    We have a bit of a sensitive matter this time.
+<ce>                    A wealthy family has... misplaced one of their
+<ce>                    heirlooms. And, yeah, it involves going
+<ce>                    in a dungeon. Of course. So, what do you say?
+<--->
+<ce>                    Just in time. I was worried I'd have to do this
+<ce>                    myself. Some rich folk had a trinket stolen and
+<ce>                    they want us to get it back. By the way, it's
+<ce>                    in a dungeon, if that can help you decide
+<ce>                    wheter you want it or not.
+
+RefuseQuest:  [1001]
+<ce>                    Can't say I blame you. I'll find someone to
+<ce>                    take care of it.
+<--->
+<ce>                    Not the response I was hoping for, but suit
+<ce>                    yourself.
+
+AcceptQuest:  [1002]
+<ce>                    Good, good. These aren't the most glorious jobs,
+<ce>                    but they pay well. I told the family we'd get
+<ce>                    their _heirloom_ back in =timer_ days. Now, let me
+<ce>                    check where it is exactly...
+<--->
+<ce>                    The nobleman set us a deadline of =timer_ days.
+<ce>                    Move quickly so we can have this over and done
+<ce>                    with. You'll be looking for a _heirloom_ in...
+<ce>                    Ah, I'll check the name of the place again.
+<--->
+<ce>                    We're trusting you on this one. Bring honor to
+<ce>                    the Fighters Guild. For a reason of their own,
+<ce>                    our contractor told us they need the _heirloom_
+<ce>                    in =timer_ days. Where did they say it may be
+<ce>                    located again? Let me check... 
+
+QuestFail:  [1003]
+<ce>                    
+
+QuestComplete:  [1004]
+<ce>                    Give it here. They've asked for the utmost discretion
+<ce>                    on this matter, so I'll make sure it gets to them.
+<ce>                    Here's your share of their reward.
+<--->
+<ce>                    Good, the heirloom looks undamaged. They'll be pleased,
+<ce>                    I'm sure. And we're pleased with their money.
+<--->
+<ce>                    This is the heirloom, right? Nice work with this one.
+<ce>                    You make us all proud.
+
+QuestorPostsuccess:  [1008]
+Remember the family from whom you recovered their _heirloom_? They send their thanks to you.
+
+QuestorPostFailure:   [1009]
+If you can't follow simple instructions like recovering that family's heirloom in time, I don't know how you'll keep up in the Fighters Guild.
+
+
+Message: 1010
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn_ to recover
+a wealthy family's _heirloom_ stolen by
+bandits. I have =timer_ days to return
+with the item.
+
+Message: 1011
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn2_ to recover
+a wealthy family's missing _heirloom_.
+I have =timer_ days to return with
+the item.
+
+Message: 1012
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn3_ to recover
+a wealthy family's _heirloom_ stolen by
+Orcs. I have =timer_ days to return
+with the item.
+
+Message: 1013
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn4_ to recover
+a wealthy family's _heirloom_ stolen by
+giants. I have =timer_ days to return
+with the item.
+
+Message: 1014
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn5_ to recover
+a wealthy family's _heirloom_ apparently
+stolen by vampires. I have =timer_ days to
+return with the item.
+
+Message: 1015
+%qdt
+_questgiver_, the guildmaster of
+___questgiver_'s Fighters Guild, has
+sent me to __dgn6_ to recover
+a wealthy family's _heirloom_ apparently
+stolen by wizards. I have =timer_ days to
+return with the item.
+
+Message: 1020
+<ce>This must be the _heirloom_ you were
+<ce>sent to recover.
+
+Message: 1030
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn_.
+
+Message: 1031
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn2_.
+
+Message: 1032
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn3_.
+
+Message: 1033
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn4_.
+
+Message: 1034
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn5_.
+
+Message: 1035
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>the _heirloom_ from __dgn6_.
+
+Message: 1040
+<ce>Right. It's in __dgn_, some marauder
+<ce>hideout. I tell you this province is losing its
+<ce>grip. The bandits become more brazen every day.
+
+Message: 1041
+<ce>Ah there it is. __dgn2_,
+<ce>some natural cave or something I believe.
+<ce>As for why whoever inhabits the place brought
+<ce>the heirloom there, I have no idea.
+
+Message: 1042
+<ce>__dgn3_. An Orc stronghold. How could
+<ce>I forget that? Those green-skins show no mercy.
+
+Message: 1043
+<ce>Right, it's __dgn4_. A place
+<ce>inhabited by giants. They don't usually
+<ce>cause problems like this, but these ones
+<ce>are stirred up for some reason.
+
+Message: 1044
+<ce>__dgn5_. The rumors say the culprits are
+<ce>vampires. I try not to listen to swaggle like that,
+<ce>but figured you should know.
+
+Message: 1045
+<ce>__dgn6_. Of course, it's a group of
+<ce>wizards they're pointing their fingers at. Who knows
+<ce>what they want it for, but we want it back.
+
+QBN:
+Item _reward_ gold
+Item _heirloom_ amulet
+
+Person _questgiver_ group Questor
+
+Place _dgn_ remote dungeon2
+Place _dgn2_ remote dungeon6
+Place _dgn3_ remote dungeon1
+Place _dgn4_ remote dungeon13
+Place _dgn5_ remote dungeon8
+Place _dgn6_ remote dungeon9
+
+Clock _timer_ 25.00:00 35.00:00
+
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+    have _heirloom_ set _acquired_
+    pick one of _loc1_ _loc2_ _loc3_ _loc4_ _loc5_ _loc6_
+
+_loc1_ task:
+	log 1010 step 0
+    reveal _dgn_
+    place item _heirloom_ at _dgn_
+    say 1040
+
+_loc2_ task:
+	log 1011 step 0
+    reveal _dgn2_
+    place item _heirloom_ at _dgn2_
+    say 1041
+
+_loc3_ task:
+	log 1012 step 0
+    reveal _dgn3_
+    place item _heirloom_ at _dgn3_
+    say 1042
+
+_loc4_ task:
+	log 1013 step 0
+    reveal _dgn4_
+    place item _heirloom_ at _dgn4_
+    say 1043
+
+_loc5_ task:
+	log 1014 step 0
+    reveal _dgn5_
+    place item _heirloom_ at _dgn5_
+    say 1044
+
+_loc6_ task:
+	log 1015 step 0
+    reveal _dgn6_
+    place item _heirloom_ at _dgn6_
+    say 1045
+
+_acquired_ task:
+    say 1020
+
+_success_ task:
+    toting _heirloom_ and _questgiver_ clicked
+    give pc _reward_
+    end quest
+
+_fail1_ task:
+    when _timer_ and _loc1_
+    say 1030
+    make _heirloom_ permanent
+    end quest
+
+_fail2_ task:
+    when _timer_ and _loc2_
+    say 1031
+    make _heirloom_ permanent
+    end quest
+
+_fail3_ task:
+    when _timer_ and _loc3_
+    say 1032
+    make _heirloom_ permanent
+    end quest
+
+_fail4_ task:
+    when _timer_ and _loc4_
+    say 1033
+    make _heirloom_ permanent
+    end quest
+
+_fail5_ task:
+    when _timer_ and _loc5_
+    say 1034
+    make _heirloom_ permanent
+    end quest
+
+_fail6_ task:
+    when _timer_ and _loc6_
+    say 1035
+    make _heirloom_ permanent
+    end quest

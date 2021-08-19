@@ -1,0 +1,188 @@
+Quest: SKYRIM01A
+DisplayName: Bounty - Bandit
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    Greetings, %ra. Some of the %rt's
+<ce>                    men came by and left this bounty letter.
+<ce>                    It concerns a group of bandits in
+<ce>                    %reg. Do you want to see it?
+<--->
+<ce>                    Damn bandits. A member of the militia came
+<ce>                    here and asked me to show this bounty letter
+<ce>                    to any able-bodied bounty hunter. It's about
+<ce>                    bandits. Wanna take a look?
+
+RefuseQuest:  [1001]
+<ce>                    I guess someone else will take care of it. What
+<ce>                    can I do for you?
+<--->
+<ce>                    Can't blame you. That sounds way too dangerous.
+<ce>                    Why can't the %rt take care of it anyway?
+<--->
+<ce>                    'tis a shame. Those bastards will continue to
+<ce>                    prey upon the poor fols of %reg.
+
+AcceptQuest:  [1002]
+<ce>                    Here. Take a look at this.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    _dummy_ is dead? Excellent. You've done
+<ce>                    us a great service. Here is your reward. 
+<--->
+<ce>                    Ah, so %rt's bounty notice has been
+<ce>                    answered. The good people have you to
+<ce>                    thank. Good work, %ra. Here's your gold.
+
+RumorsDuringQuest:   [1005]
+I hear some of the roads in %reg are too dangerous to travel alone. Bandits everywhere.
+
+RumorsPostSuccess:   [1007]
+The town crier said _dummy_, the leader of those damn bandits at __dgn_, has been killed. Good riddance!
+
+QuestorPostsuccess:  [1008]
+Ah, %reg's bounty hunter. How can I help?
+
+
+Message: 1010
+%qdt
+The %rt of %reg has put a
+bounty on the head of _dummy_,
+the leader of a group of bandits
+located in __dgn_. 
+_steward_ in __palace_'s Palace
+is the one to see, should I decide
+to collect my bounty.
+
+Message: 1020
+<ce>BOUNTY
+<ce>
+<ce>
+By order of %rn, %rt of %reg:
+<ce>
+To all able bodied men and women of %reg.
+The bandits located in __dgn_ have
+been harassing, robbing, and attacking citizens
+and visitors.
+<ce>
+Refer to the directions to __dgn_ on the
+back of this notice.
+<ce>
+A _reward_ gold reward will be offered to anyone who kills
+their leader, _dummy_.
+<ce>
+--_steward_
+  __palace_'s Palace
+
+Message: 1030
+<ce>Never should have come here!
+<--->
+<ce>Lookee here. Looks like we got ourselves a hero.
+<--->
+<ce>You picked a bad time to get lost, friend.
+<--->
+<ce>Now ain't this a surprise.
+<--->
+<ce>Time to die, hero!
+<--->
+<ce>Go ahead, try and fight back!
+<--->
+<ce>Die already so I can take your stuff!
+<--->
+<ce>Whatcha gonna do? Huh? Whatcha gonna do?
+<--->
+<ce>Gonna split your belly like an old woman's purse!
+<--->
+<ce>Gonna rip you... open!
+<--->
+<ce>You'll be so much easier to rob when you're dead...
+<--->
+<ce>Tell you what. You start running so I can stab you in the back.
+<--->
+<ce>Can't wait to count out your coin...
+
+Message: 1040
+<ce>_dummy_, the scourge of %reg, has been killed.
+
+
+QBN:
+Item _reward_ gold
+Item _bounty_ letter used 1020
+
+Person _steward_ group Resident4
+Person _dummy_ group Resident1
+
+Place _dgn_ remote dungeon2
+Place _palace_ remote palace
+
+Foe _bandit1_ is Rogue
+Foe _bandit2_ is Thief
+Foe _bandit3_ is Warrior
+Foe _bandit4_ is Archer
+Foe _bandit5_ is Mage
+Foe _bandit6_ is Nightblade
+
+Clock _timer_ 70.00:00
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place npc _steward_ at _palace_
+    get item _bounty_
+    reveal _dgn_
+    pick one of _foe1_ _foe2_ _foe3_ _foe4_ _foe5_ _foe6_
+
+_foe1_ task:
+    place foe _bandit1_ at _dgn_
+
+_foe2_ task:
+    place foe _bandit2_ at _dgn_
+
+_foe3_ task:
+    place foe _bandit3_ at _dgn_
+
+_foe4_ task:
+    place foe _bandit4_ at _dgn_
+
+_foe5_ task:
+    place foe _bandit5_ at _dgn_
+
+_foe6_ task:
+    place foe _bandit6_ at _dgn_
+
+_injured_ task:
+    injured _bandit1_
+    injured _bandit2_
+    injured _bandit3_
+    injured _bandit4_
+    injured _bandit5_
+    injured _bandit6_
+    say 1030
+
+_slain_ task:
+    killed _bandit1_
+    killed _bandit2_
+    killed _bandit3_
+    killed _bandit4_
+    killed _bandit5_
+    killed _bandit6_    
+    say 1040
+
+_stewardclicked_ task:
+    clicked npc _steward_
+
+_success_ task:
+    when _stewardclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _stewardclicked_ and not _slain_
+    clear _stewardclicked_ _clearclick_
+
+_timer_ task:
+    end quest

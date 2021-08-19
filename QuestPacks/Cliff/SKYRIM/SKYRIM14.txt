@@ -1,0 +1,339 @@
+Quest: SKYRIM14
+DisplayName: The Shill Job
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>When a client needs us to eliminate another, we don't
+<ce>operate like the Dark Brotherhood. We find alternate
+<ce>means to get them out of the way. We send you to plant
+<ce>some phony evidence in the mark's house, and then tip
+<ce>off the town guard... the rest takes care of itself.
+<ce>Sound like you can handle it?
+<--->
+<ce>Someone wants to see somebody suffer. They're paying
+<ce>a good bit of coin to have us plant the evidence in
+<ce>their house to frame him. You in?
+<--->
+<ce>This one should be easy. Get in, plant the goods and
+<ce>get out. Quiet and neat. Sound like your kind of job?
+<--->
+<ce>Somebody must have ticked-off our client badly. We
+<ce>have to drop some drugs to frame the fellow. Our
+<ce>client's impatient and keeps asking if the job's
+<ce>done. Can you get him off my back?
+<--->
+<ce>Somebody must have ticked-off our client badly. We
+<ce>have to drop some drugs to frame the fellow. Our
+<ce>client's impatient and keeps asking if the job's
+<ce>done. Can you get her off my back?
+<--->
+<ce>Got a good one here. Personal score to settle between
+<ce>myself and some fool. You up for it?
+<--->
+<ce>%mn2 finally got some dirt on the mark and the
+<ce>evidence to back it up. Think you can give him
+<ce>a hand by dropping some drugs in the mark's
+<ce>house?
+<--->
+<ce>%fn2 finally got some dirt on the mark and the
+<ce>evidence to back it up. Think you can give her
+<ce>a hand by dropping some drugs in the mark's
+<ce>house?
+<--->
+<ce>Some fool angered someone pretty high up in the keep.
+<ce>That noble wants to see him imprisoned and paid us to
+<ce>do it. Can I count on you to frame that fool for me?
+<--->
+<ce>Got a personal score to settle and I'd consider it a
+<ce>favor if you'd take the job. Think you can help me
+<ce>out?
+<--->
+<ce>Sure, sure. Got one that should be pretty easy, as
+<ce>long as you keep your weapon sheathed. Can you handle
+<ce>it?
+<--->
+<ce>Yeah. Someone ticked off %ln and she wants to teach
+<ce>them a lesson... our way. You in?
+<--->
+<ce>Yeah. Someone ticked off %ln and he wants to teach
+<ce>them a lesson... our way. You in?
+
+RefuseQuest:  [1001]
+<ce>All right, whatever you want.
+<--->
+<ce>No problem, I'll find someone else.
+<ce>Don't worry about it.
+<--->
+<ce>Hey, you approached me. You want to play coward,
+<ce>that's your problem.
+<--->
+<ce>Look, I don't like wasting my time.
+<ce>Come back when you decide to get serious.
+<--->
+<ce>Not interested? Fine. Then let me offer it to someone
+<ce>with a little more backbone.
+<--->
+<ce>You need to start pulling your own weight around here,
+<ce>otherwise I might "forget" to offer you any more jobs.
+<--->
+<ce>Fine. I'll just keep all this coin for myself then.
+<--->
+<ce>Look, if you just want to sit around the hall all day
+<ce>with yer thumb up yer arse, that's your business.
+<ce>Just quit wasting my time.
+<--->
+<ce>The last time I checked, gold coins aren't falling
+<ce>from the heavens. You better take some jobs if you
+<ce>want to earn your share.
+<--->
+<ce>Keep turning down jobs like this and the Guild will
+<ce>begin to lose respect for you.
+
+AcceptQuest:  [1002]
+<ce>Good. Here's what you need to do. Take this
+<ce>_evidence_ and plant it at _loc_ in
+<ce>__loc_. We don't care who lives there,
+<ce>that's not our concern. Our client expects
+<ce>this to be done in =timer_ days, so get
+<ce>moving.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>So, our client will be satisfied? 
+<ce>Here's your gold. Try not to spend
+<ce>it all in one place.
+<--->
+<ce>All done? Fine. I guess you'll need
+<ce>your coin then.
+<--->
+<ce>The job's done? And with no strings
+<ce>attached? Not bad. Here, got some
+<ce>coin for you.
+
+RumorsDuringQuest:   [1005]
+
+
+RumorsPostFailure:   [1006]
+
+
+RumorsPostSuccess:   [1007]
+
+
+QuestorPostsuccess:  [1008]
+                
+
+QuestorPostfailure:  [1009]
+                
+
+Message: 1010
+%qdt
+The Thieves Guild received a contract to
+frame an enemy of one of our clients.
+_questgiver_ of the Thieves Guild in
+___questgiver_ told me to plant the
+_evidence_ at _loc_
+in __loc_. I need to complete
+this job without getting caught. The
+client expects the deed to be done in
+=timer_ days. 
+
+Message: 1020
+<ce>This is _loc_. Dropping the
+<ce>_evidence_ somewhere around
+<ce>will be enough to frame the owner.
+
+Message: 1030
+<ce>As you remove the _evidence_ from your pack
+<ce>and deposit it somewhere, the owner suddenly
+<ce>arrives, catching you red-handed.
+<ce>
+<ce>"%oth! Who are.. what are... GUARDS! GUARDS!"
+<ce>he screams as he runs outside.
+<--->
+<ce>As you remove the _evidence_ from your pack
+<ce>and deposit it somewhere, the owner suddenly
+<ce>arrives, catching you red-handed.
+<ce>
+<ce>"%oth! Who are.. what are... GUARDS! GUARDS!"
+<ce>she screams as she runs outside.
+
+Message: 1040
+<ce>You take the _evidence_ from your pack and
+<ce>carefully place it where the guards will easily
+<ce>find it. The deed is done.
+
+Message: 1050
+<ce>You idiot! We have to cover your mess up and
+<ce>that costs us gold... which means you don't
+<ce>get any.
+<--->
+<ce>Being connected to a criminal didn't make the
+<ce>client happy... next time, act like a real
+<ce>thief and don't get caught.
+<--->
+<ce>Good going... you got caught in doing the deed.
+<ce>Now how do you think that looks for the Guild?
+<ce>Better luck next time.
+
+Message: 1060
+<ce>It has been =timer_ days since you were sent to
+<ce>__loc_ to plant the _evidence_ at
+<ce>_loc_. The client will not be happy to
+<ce>learn that the deed has never been done.
+
+
+QBN:
+Item _reward_ gold
+Item _evidence_ drug
+
+Person _questgiver_ group Questor male
+
+Place _loc_ remote house
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    get item _evidence_
+    pc at _loc_ set _inside_
+    have _evidence_ set _haveitem_
+
+_day_ task:
+    daily from 06:00 to 18:00
+
+_inside_ task:
+    say 1020
+
+_haveitem_ task:
+    clear _dropitem_
+
+_stealth00_ task:
+    when skill Stealth is at least 0
+
+_stealth10_ task:
+    when skill Stealth is at least 10
+
+_stealth20_ task:
+    when skill Stealth is at least 20
+
+_stealth30_ task:
+    when skill Stealth is at least 30
+
+_stealth40_ task:
+    when skill Stealth is at least 40
+
+_stealth50_ task:
+    when skill Stealth is at least 50
+
+_stealth00to10_ task:
+    when _stealth00_ and not _stealth10_
+
+_stealth10to20_ task:
+    when _stealth10_ and not _stealth20_
+
+_stealth20to30_ task:
+    when _stealth20_ and not _stealth30_
+
+_stealth30to40_ task:
+    when _stealth30_ and not _stealth40_
+
+_stealth40to50_ task:
+    when _stealth40_ and not _stealth50_
+
+_stealth50to100_ task:
+    when _stealth50_
+
+_chancecaughtday01_ task:
+    when _day_ and _dropitem_ and _stealth50_
+    pick one of _caughtno_
+
+_chancecaughtday02_ task:
+    when _day_ and _dropitem_ and _stealth40to50_
+    pick one of _caughtyes_ _caughtno_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday05_ task:
+    when _day_ and _dropitem_ and _stealth30to40_
+    pick one of _caughtyes_ _caughtyes_ _caughtno_ _caughtno_ _caughtno_
+
+_chancecaughtday06_ task:
+    when _day_ and _dropitem_ and _stealth20to30_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_ _caughtno_
+
+_chancecaughtday07_ task:
+    when _day_ and _dropitem_ and _stealth10to20_
+    pick one of _caughtyes_ _caughtyes_ _caughtyes_ _caughtyes_ _caughtno_
+
+_chancecaughtday08_ task:
+    when _day_ and _dropitem_ and _stealth00to10_
+    pick one of _caughtyes_
+
+_chancecaughtnight01_ task:
+    when not _day_ and _dropitem_ and _stealth30_
+    pick one of _caughtno_
+
+_chancecaughtnight03_ task:
+    when not _day_ and _dropitem_ and _stealth20to30_
+    pick one of _caughtyes_ _caughtno_ _caughtno_
+
+_chancecaughtnight04_ task:
+    when not _day_ and _dropitem_ and _stealth10to20_
+    pick one of _caughtyes_ _caughtyes_ _caughtno_
+
+_chancecaughtnight06_ task:
+    when not _day_ and _dropitem_ and _stealth00to10_
+    pick one of _caughtyes_
+
+_dropitem_ task:
+    dropped _evidence_ at _loc_
+    clear _haveitem_
+
+_caughtyes_ task:
+    say 1030
+    spawncityguards immediate
+    setplayercrime Theft
+
+_caughtno_ task:
+    say 1040
+
+_haltex_ task:
+    when _caughtyes_ and not _inside_
+    spawncityguards immediate
+
+_success_ task:
+    when _dropitem_ and _caughtno_ and _qgclicked_ and not _caughtyes_
+    give pc _reward_
+    end quest
+
+_fail1_ task:
+    when _dropitem_ and _caughtyes_ and _qgclicked_ and not _caughtno_
+    say 1050
+    end quest
+
+_fail2_ task:
+    when _dropitem_ and _caughtyes_ and _caughtno_ and _qgclicked_
+    say 1050
+    end quest
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_clearqggclicked_ task:
+    when _qgclicked_ and not _dropitem_
+    clear _qgclicked_ _clearqggclicked_
+
+_timerfail1_ task:
+    when _timer_ and not _haveitem_
+    say 1060
+    end quest
+
+_timerfail2_ task:
+    when _timer_ and _haveitem_
+    say 1060
+    make _evidence_ permanent
+    end quest

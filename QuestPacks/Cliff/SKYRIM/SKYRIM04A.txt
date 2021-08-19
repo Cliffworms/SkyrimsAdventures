@@ -1,0 +1,126 @@
+Quest: SKYRIM04A
+DisplayName: Bounty - Giant
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    Greetings, %ra. Some of the %rt's
+<ce>                    men came by and left this bounty letter.
+<ce>                    It concerns a giant causing trouble in
+<ce>                    %reg. Sounds dangerous. 
+<ce>                    Do you want to see it?
+<--->
+<ce>                    Did you hear? A giant has attacked a
+<ce>                    village somewhere in %reg!
+<ce>                    The %rt put a bounty on its head.
+<ce>                    I have it here. Would you like to
+<ce>                    take a look?
+
+RefuseQuest:  [1001]
+<ce>                    I wonder who will be brave enough to
+<ce>                    face such a monstrosity. Anyway, is
+<ce>                    there anything I can help you with?
+<--->
+<ce>                    Can't blame you. That sounds way too
+<ce>                    dangerous. I'm sure some giant hunter
+<ce>                    will show up.
+
+AcceptQuest:  [1002]
+<ce>                    Here. Take a look at this.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    The giant =giant_ is dead? Excellent. You've
+<ce>                    done us a great service. Here is your reward. 
+<--->
+<ce>                    The good people have you to thank. Killing
+<ce>                    a giant is no small feat. Good work, %ra.
+<ce>                    Here's your gold.
+
+RumorsDuringQuest:   [1005]
+Those damn giants! A cousin of mine got crushed by stone thrown on his village.
+<--->
+A giant known as =giant_ has been active in ____dgn_. I hear the %rt's put a bounty on its head.
+
+RumorsPostSuccess:   [1007]
+The giant =giant_'s dead! Good riddance, I say. 
+
+QuestorPostsuccess:  [1008]
+Ah, %reg's giant hunter. How can I help?
+
+
+Message: 1010
+%qdt
+The %rt of %reg has put a
+bounty on a giant terrorizing
+the countryside. It has made its
+home in __dgn_. _steward_
+in __palace_'s Palace is the
+one to see, should I decide to
+collect my bounty.
+
+Message: 1020
+<ce>BOUNTY
+<ce>
+<ce>
+By order of %rn, %rt of %reg:
+<ce>
+To all able bodied men and women of %reg.
+The giant known as =giant_ located
+in __dgn_ has been harassing, robbing,
+and attacking citizens and visitors.
+<ce>
+Refer to the directions to __dgn_ on the
+back of this notice.
+<ce>
+A _reward_ gold reward will be offered to anyone who
+kills it.
+<ce>
+--_steward_
+  __palace_'s Palace
+
+Message: 1030
+<ce>=giant_, the giant terrorizing %reg, has been killed.
+
+
+QBN:
+Item _reward_ gold
+Item _bounty_ letter used 1020
+
+Person _steward_ group Resident4
+
+Place _dgn_ remote dungeon13
+Place _palace_ remote palace
+
+Foe _giant_ is Giant
+
+Clock _timer_ 70.00:00
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place npc _steward_ at _palace_
+    get item _bounty_
+    reveal _dgn_
+    place foe _giant_ at _dgn_
+
+_slain_ task:
+    killed _giant_ 
+    say 1030
+
+_stewardclicked_ task:
+    clicked npc _steward_
+
+_success_ task:
+    when _stewardclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _stewardclicked_ and not _slain_
+    clear _stewardclicked_ _clearclick_
+
+_timer_ task:
+    end quest

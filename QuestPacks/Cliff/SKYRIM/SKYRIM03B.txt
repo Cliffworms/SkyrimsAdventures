@@ -1,0 +1,156 @@
+Quest: SKYRIM03B
+DisplayName: Bounty - Orc
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    Greetings, %ra. You look like
+<ce>                    you can handle yourself in combat.
+<ce>                    The %rt has put out a bounty
+<ce>                    on some Orcs. Here, take a look
+<ce>                    at this decree for details.
+<--->
+<ce>                    I fear I have much on my mind. Orcs,
+<ce>                    you see. They have been causing trouble
+<ce>                    of late in %reg. In fact,
+<ce>                    the %rt has put out a bounty on
+<ce>                    a war party's leader. Here, take a look
+<ce>                    at this notice.
+
+RefuseQuest:  [1001]
+<ce>                    I understand. I believe they will be
+<ce>                    taken care of soon.
+<--->
+<ce>                    What a shame. I shall find someone more...
+<ce>                    talented.
+
+AcceptQuest:  [1002]
+<ce>                    
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    =orc1_ is dead? Excellent. You've done
+<ce>                    us a great service. Here is your reward. 
+<--->
+<ce>                    Ah, so %rt's bounty notice has been
+<ce>                    answered. The good people have you to
+<ce>                    thank. Good work, %ra. Here's your gold.
+
+RumorsDuringQuest:   [1005]
+Those damn green-skins are at it again in ____steward_. The %rt has put a bounty on one of their leaders.
+
+RumorsPostSuccess:   [1007]
+The damn Orc causing trouble in ____steward_ has been hunted down. The only good Orc is a dead Orc, am I right? 
+
+QuestorPostsuccess:  [1008]
+Ah, %reg's Orc hunter. How can I help?
+
+
+Message: 1010
+%qdt
+The %rt of %reg has put a
+bounty on the head of =orc1_,
+the leader of a group of Orcs
+located in __dgn_. 
+_steward_ in __palace_'s Palace
+is the one to see, should I decide
+to collect my bounty.
+
+Message: 1020
+<ce>BOUNTY
+<ce>
+<ce>
+By order of %rn, %rt of %reg:
+<ce>
+To all able bodied men and women of %reg.
+The Orcs located in __dgn_ have
+been harassing, robbing, and attacking citizens
+and visitors.
+<ce>
+Refer to the directions to __dgn_ on the
+back of this notice.
+<ce>
+A _reward_ gold reward will be offered to anyone who kills
+their leader, =orc1_.
+<ce>
+--_steward_
+  __palace_'s Palace
+
+Message: 1030
+<ce>Come. Come and face the children of Mauloch...
+<--->
+<ce>First you... then all of ____dgn_!
+<--->
+<ce>For Orsinium!
+<--->
+<ce>The Orcs will reclaim what is rightfully ours!
+<--->
+<ce>Orsinium forever!
+<--->
+<ce>Remember Orsinium!
+
+Message: 1040
+<ce>=orc1_, leader of __dgn_'s war party,
+<ce>has been killed.
+
+
+QBN:
+Item _reward_ gold
+Item _bounty_ letter used 1020
+
+Person _steward_ group Resident4
+
+Place _dgn_ remote dungeon1
+Place _palace_ remote palace
+
+Foe _orc1_ is Orc_sergeant
+Foe _orc2_ is Orc_shaman
+Foe _orc3_ is Orc_warlord
+
+Clock _timer_ 70.00:00
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place npc _steward_ at _palace_
+    get item _bounty_
+    reveal _dgn_
+    pick one of _foe1_ _foe2_ _foe3_
+
+_foe1_ task:
+    place foe _orc1_ at _dgn_
+
+_foe2_ task:
+    place foe _orc2_ at _dgn_
+
+_foe3_ task:
+    place foe _orc3_ at _dgn_
+
+_injured_ task:
+    injured _orc1_
+    injured _orc2_
+    injured _orc3_
+    say 1030
+
+_slain_ task:
+    killed _orc1_
+    killed _orc2_
+    killed _orc3_  
+    say 1040
+
+_stewardclicked_ task:
+    clicked npc _steward_
+
+_success_ task:
+    when _stewardclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _stewardclicked_ and not _slain_
+    clear _stewardclicked_ _clearclick_
+
+_timer_ task:
+    end quest

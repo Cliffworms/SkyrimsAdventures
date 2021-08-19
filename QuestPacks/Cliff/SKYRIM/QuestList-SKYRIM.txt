@@ -1,0 +1,29 @@
+-- Cliffworms Skyrim's Adventures pack list
+
+-- name:        filename of QRC txt file
+-- group:       guild group from FactionFile.GuildGroups enum, or social group from FactionFile.SocialGroups enum
+-- membership:  N=non-member, M=member, P=prospect, T=Akatosh, A=Arkay, D=Dibella, J=Julianos, K=Kynareth, R=Mara, S=Stendarr, Z=Zenithar
+-- minReq:      minimum requirement to be offered the quest: (val < 10) = guild rank / player level, or (val >= 10) = min reputation
+-- flag:        0 = nothing, X = adult/nudity, 1 = one time quest
+-- notes:
+
+schema: *name, group, membership, minReq, flag, notes
+
+SKYRIM01A, Merchants, N, 0, 0, Bounty - Bandit - Merchants
+SKYRIM01B, Nobility, N, 3, 0, Bounty - Bandit - Nobility
+SKYRIM02A, Merchants, N, 0, 0, Bounty - Dragonling - Merchants
+SKYRIM02B, Nobility, N, 5, 0, Bounty - Dragonling - Nobility
+SKYRIM03A, Merchants, N, 1, 0, Bounty - Orc - Merchants
+SKYRIM03B, Nobility, N, 3, 0, Bounty - Orc - Nobility
+SKYRIM04A, Merchants, N, 0, 0, Bounty - Giant - Merchants
+SKYRIM04B, Nobility, N, 3, 0, Bounty - Giant - Nobility
+SKYRIM05, MagesGuild, M, 3, 0, Azra's Creations
+SKYRIM06, FightersGuild, M, 4, 0, Family Heirloom
+SKYRIM07, HolyOrder, A, 7, 0, Preemptive Strike
+SKYRIM08, FightersGuild, M, 0, 0, Rescue Mission
+SKYRIM09, FightersGuild, M, 0, 0, Hired Muscle
+SKYRIM10, FightersGuild, M, 3, 0, Trouble in the Iliac Bay
+--SKYRIM11, GeneralPopulace, M, 0, 0, Escaped Criminal
+SKYRIM12, MagesGuild, M, 0, 0, Enchanting Pickup
+SKYRIM13, GeneralPopulace, M, 0, 0, The Numbers Job
+SKYRIM14, GeneralPopulace, M, 0, 0, The Shill Job

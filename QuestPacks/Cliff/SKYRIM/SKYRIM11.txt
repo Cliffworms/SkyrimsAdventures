@@ -1,0 +1,117 @@
+Quest: SKYRIM11
+DisplayName: Escaped Criminal
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>            It sounds like %reg is too busy with their
+<ce>            war to keep their own prisoners in line.
+<ce>            One of them's escaped, and you're going to find
+<ce>            that coward. If you want the job, that is.
+<--->
+<ce>            The braggarts in %reg always claim that no
+<ce>            prisoner escapes their mines. What you don't hear
+<ce>            about are the ones who break off from escorts on
+<ce>            the way to %cn. One of them's escaped,
+<ce>            and you're going to find that coward. That is,
+<ce>            if you're interested.
+<--->
+<ce>            %reg seems to have trouble keeping their
+<ce>            prisoners in line. One of them's escaped, and
+<ce>            you're going to find that coward. If you want the
+<ce>            job, that is.
+<--->
+<ce>            The idiots in %reg still think the best place
+<ce>            for prisoners is a hole in the ground. No surprise,
+<ce>            but one of them's gotten out. Again. One of them's
+<ce>            escaped, and you're going to find that coward.
+<ce>            That is, if you're interested.
+<--->
+<ce>            The so-called prison in %reg leaks like one of
+<ce>            their fishnets. This is what happens when you
+<ce>            let thieves run some of your towns. The prisoners
+<ce>            just walk right out. One of them's escaped, and
+<ce>            you're going to find that coward. If you want the
+<ce>            job, that is.
+
+RefuseQuest:  [1001]
+<ce>            We choose our battles, and you've chosen yours.
+<ce>            Someone else can take care of it.
+<--->
+<ce>            Unfortunate, but someone else will take care of it.
+
+AcceptQuest:  [1002]
+<ce>            The prisoner's called _dummy_. At this point
+<ce>            they don't care what happens to %g2 and neither do I.
+<ce>            Best to just kill %g2 and be done with it. I've been
+<ce>            told %g ran towards in the direction of ___loc1_. 
+<ce>            Start your search there, ask around and follow the trail.
+<ce>            I promised the criminal would be dealt with before
+<ce>            =timer_ days have passed. Be careful, %g is known to
+<ce>            be dangerous.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>            So, _dummy_'s dead? You've brought good
+<ce>            reputation to the Fighters Guild. More importantly,
+<ce>            some gold.
+<--->
+<ce>            Another job well done. Your payment is secure, and you
+<ce>            have my thanks.
+
+RumorsDuringQuest:   [1005]
+
+
+RumorsPostFailure:   [1006]
+
+
+RumorsPostSuccess:   [1007]
+
+
+QuestorPostsuccess:  [1008]
+                
+
+QuestorPostfailure:  [1009]
+                
+
+Message: 1010
+%qdt
+_questgiver_ of the Fighters Guild in
+___questgiver_ has ordered me to catch
+_dummy_, an escaped prisoner. I need
+to start my search in ___loc1_, where
+%g was last seen. I have =timer_ days, else
+%g may escape %reg.
+
+QBN:
+Item _reward_ gold
+
+Person _questgiver_ group Questor male
+Person _dummy_ group Resident3
+
+Place _loc1_ remote tavern
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+-- Scenario 1 : Hiding in farm
+-- Scenario 2 : Hiding in cult
+-- Scenario 3 : Hiding in dungeon exteior
+-- Scenario 4 : Hiding in shack
+-- Scenario 5 : Hiding/Dead inside a dungeon
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_clearqggclicked_ task:
+    when _qgclicked_ and not
+    clear _qgclicked_ _clearqggclicked_
+ 
+_timer_ task:
+    end quest
