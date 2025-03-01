@@ -1,0 +1,145 @@
+Quest: SKYRIM05
+DisplayName: Azra's Trinkets
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    I do not have guild duties. Perhaps later.
+<ce>                    For now I have a slightly more personal
+<ce>                    request. You see, I'm a collector. Of
+<ce>                    trinkets. Magical trinkets. In particular,
+<ce>                    those made by Azra Nightwielder. Through
+<ce>                    some divinations, I believe I've located
+<ce>                    one in a dungeon of some kind. If you
+<ce>                    retrieve it, I'll give you a trinket of my
+<ce>                    own making. Nightwielder's creations don't
+<ce>                    really hold up in comparison to what can be
+<ce>                    made today, but they have a sentimental
+<ce>                    value for me. You understand.
+
+RefuseQuest:  [1001]
+<ce>                    Most unfortunate indeed. I was certain that
+<ce>                    you would be interested.
+
+AcceptQuest:  [1002]
+<ce>                    Thank you for considering it. The Master
+<ce>                    of the Scry and I discovered a _azra_
+<ce>                    located in __dgn_, %di
+<ce>                    of here. I am positive it is one such
+<ce>                    of Azra's creations. I have promised a
+<ce>                    fellow scholar that I would show it to him
+<ce>                    in =timer_ days, so please do try to
+<ce>                    make it in time, yes?
+<--->
+<ce>                    Thank you for considering it. The Master
+<ce>                    of the Scry and I discovered a _azra_
+<ce>                    located in __dgn_, %di
+<ce>                    of here. I am positive it is one such
+<ce>                    of Azra's creations. I have promised a
+<ce>                    fellow scholar that I would show it to her
+<ce>                    in =timer_ days, so please do try to
+<ce>                    make it in time, yes?
+
+QuestFail:  [1003]
+<ce>                    
+
+QuestComplete:  [1004]
+<ce>                    You didn't have to speak a word. I could
+<ce>                    sense it the moment you came in. You've
+<ce>                    proven your worth, and I'm as good as my
+<ce>                    word. Take this trinket from my personal
+<ce>                    collection. I think you'll find it useful.
+
+QuestorPostsuccess:  [1008]
+Thank you again for recovering one of Azra Nightwielder's creations. How can I help you?
+
+QuestorPostFailure:   [1009]
+I asked you to recover Azra's _azra_ as a personal favor and you failed. I am deeply disappointed, %pcn.
+
+
+Message: 1010
+%qdt
+_questgiver_, the guildmagister of
+___questgiver_'s Mages Guild, has
+sent me to __dgn_ to recover
+one of Azra Nightwielder's creations,
+a _azra_, as a personal favor.
+I have =timer_ days to return with
+the item. _questgiver_
+promised me a magical trinket of %g3 collection.
+
+Message: 1020
+<ce>This must be one of Azra Nightwielder's famous
+<ce>creations. It is beaming with magical energy.
+
+Message: 1030
+<ce>More than =timer_ days have passed since
+<ce>_questgiver_ asked you to recover
+<ce>Azra Nightwielder's _azra_
+<ce>from __dgn_.
+
+Message: 1040
+<ce>A strange and powerful enegery suddenly
+<ce>emanates from Azra Nightwielder's
+<ce>_azra_, blinding you. When you
+<ce>open your eyes, you notice the object
+<ce>has vanished from existence.
+
+Message: 1050
+<ce>Before you go, would you like to learn
+<ce>more about Azra Nightwielder?
+
+Message: 1051
+<ce>He was the original shadowmage. His
+<ce>advances in magic are legendary.
+<ce>He was also a pioneer in the field
+<ce>of enchantment. Every trinket of his
+<ce>that I have uncovered has led me to
+<ce>greater understanding.
+
+Message: 1052
+<ce>Very well. Good luck in __dgn_, %lev.
+
+QBN:
+Item _reward_ magic_item
+Item _azra_ magic_item
+
+Person _questgiver_ group Questor
+
+Place _dgn_ remote dungeon
+
+Clock _timer_ 00:00 0 flag 17 range 0 2
+
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place item _azra_ at _dgn_
+    reveal _dgn_
+    have _azra_ set _acquired_
+    prompt 1050 yes _yes_ no _no_
+
+_yes_ task:
+    say 1051
+
+_no_ task:
+    say 1052
+
+_acquired_ task:
+    say 1020
+
+_success_ task:
+    toting _azra_ and _questgiver_ clicked
+    give pc _reward_
+    end quest
+
+_fail1_ task:
+    when _timer_ and not _acquired_
+    say 1030
+    end quest
+
+_fail2_ task:
+    when _timer_ and _acquired_
+    say 1040
+    end quest

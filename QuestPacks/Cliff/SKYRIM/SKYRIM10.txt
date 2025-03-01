@@ -1,0 +1,705 @@
+Quest: SKYRIM10
+DisplayName: Trouble in the Iliac Bay
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    There's some trouble in %reg.
+<ce>                    Farmers getting troubled by some bad types
+<ce>                    who've hanging in the area. Got some time?
+<--->
+<ce>                    There's some trouble in %reg's countryside.
+<ce>                    There's always some sort of trouble there, but now
+<ce>                    it's come to a head. Care to help?
+<--->
+<ce>                    There's some trouble in %reg.
+<ce>                    The %rt's too busy with a war, and we've been
+<ce>                    hired to take care of their problems.
+<ce>                    Are you interested?
+<--->
+<ce>                    We've been hired to deal with some pests in
+<ce>                    %reg. Someone's got them riled up,
+<ce>                    and you need to put an end to it. What do you
+<ce>                    say?
+<--->
+<ce>                    %reg is seeing a lot of trouble from
+<ce>                    some riff-raff. We need to head in and break them up.
+<ce>                    Can I entrust you with this?
+<--->
+<ce>                    There's trouble up in %reg.
+<ce>                    I'm a little surprised anyone's complaining
+<ce>                    about it, but money is money. Got time?
+
+RefuseQuest:  [1001]
+<ce>                    Unfortunate, but someone else will take care of it.
+<--->
+<ce>                    Shame. But, I'm sure one of the whelps around here
+<ce>                    will take it up.                  
+
+AcceptQuest:  [1002]
+<ce>                    I knew you could be counted on. So, we have
+<ce>                    =timer_ days to get this done. The place's
+<ce>                    called... %oth, I forgot. Let me
+<ce>                    check the contract again.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    I have already received word that the client is
+<ce>                    satisfied. You have done well for yourself, and
+<ce>                    for the Fighters Guild.
+<--->
+<ce>                    Another job well done. Your payment is secure,
+<ce>                    and you have my thanks.
+<--->
+<ce>                    I expected no less of you. And once again, you
+<ce>                    have not disappointed. 
+
+QuestorPostsuccess:  [1008]
+Our client sends his thanks for your help with that threat you disposed of. Now, what I can do ye for?
+
+Message: 1010
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe1_, the leader of a group
+of bandits holed up in ___dgn_.
+The Fighters Guild has been given =timer_ days
+to resolve the situation.
+
+Message: 1011
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe2_, a necromancer who
+has risen the dead in ___dgn2_.
+The Fighters Guild has been given =timer_ days
+to resolve the situation.
+
+Message: 1012
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe3_, an orc warlord who
+has been causing troubles in %reg.
+Their war party is located in ___dgn_.
+The Fighters Guild has been given =timer_ days
+to resolve the situation.
+
+Message: 1013
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe4_, a giant leading his
+kin in ___dgn3_. The Fighters Guild
+has been given =timer_ days to resolve
+the situation.
+
+Message: 1014
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe5_, a harpy matriarch,
+in ___dgn3_. The Fighters Guild
+has been given =timer_ days to resolve
+the situation.
+
+Message: 1015
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe6_, a spriggan who has
+been harassing the woodcutters and laborers
+close to ___dgn3_. The Fighters Guild
+has been given =timer_ days to resolve
+the situation.
+
+Message: 1016
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe7_, a vampire lord holed
+up in __dgn4_. The Fighters Guild
+has been given =timer_ days to resolve
+the situation.
+
+Message: 1017
+%qdt
+_questgiver_ of __questgiver_
+in ___questgiver_ has ordered me
+to kill =foe8_, a warlock who has been
+conducting unauthorized research in
+__dgn5_. The Fighters Guild
+has been given =timer_ days to resolve
+the situation.
+
+Message: 1020
+<ce>Ah, yes. ___dgn_ to the %di.
+<ce>Nothing but a bunch of lowly bandits.
+<ce>Cowards, who will take little effort.
+<ce>Kill their leader, =foe1_ and
+<ce>the rest should scatter like sand in
+<ce>the wind. Do what must be done.
+
+Message: 1021
+<ce>Ah, yes. ___dgn2_ to the %di.
+<ce>The restless dead. Not pretty, but if
+<ce>you don't stop them, they'll move on
+<ce>to the locals. Kill their necromancer,
+<ce>=foe2_ and the undead will stand down.
+<ce>Show them no mercy.
+
+Message: 1022
+<ce>Ah, yes. ___dgn_ to the %di.
+<ce>It's a problem with the Orcs. Unpredictable,
+<ce>unknowable, and dangerous. Kill their leader,
+<ce>=foe3_, and the war party should scatter
+<ce>away. Be careful.
+
+Message: 1023
+<ce>Ah, yes. ___dgn3_ to the %di.
+<ce>It's a clan of giants led by a certain =foe4_.
+<ce>The war is driving them out of their lands, and
+<ce>they've started attacking settlements. 
+
+Message: 1024
+<ce>Ah, yes. ___dgn3_ to the %di.
+<ce>You'll be clearing a nest of those harpies.
+<ce>One in particular, nicknamed _foe5_ by
+<ce>the locals, has been rather troublesome.
+<ce>Show it and the rest of its feathery bastards
+<ce>no mercy.
+
+Message: 1025
+<ce>Ah, yes. ___dgn3_ to the %di.
+<ce>Oddly enough, it's spriggans. Or, rather,
+<ce>one particular spriggan the farmers named
+<ce>=foe6_. Usually they leave us alone,
+<ce>but for some reason, this particular grove
+<ce>isn't.
+
+Message: 1026
+<ce>Ah, yes. ___dgn4_ to the %di.
+<ce>A place full of bloodsuckers led by one
+<ce>called =foe7_. Take every precaution.
+<ce>One bite, and you could end up as one
+<ce>of them.
+
+Message: 1027
+<ce>Ah, yes. ___dgn5_ to the %di.
+<ce>Rogue wizards. I've never trusted magic
+<ce>types. The Mages Guild is bad enough.
+<ce>Find and kill their leader, =foe8_.
+<ce>The rest of the pointy hats should stand
+<ce>down after that.
+
+Message: 1030
+<ce>You hear someone say : 
+<ce>
+<ce>"Never should have come here!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Lookee here. Looks like we got ourselves a hero."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"You picked a bad time to get lost, friend."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Now ain't this a surprise."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Time to die, hero!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Go ahead, try and fight back!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Die already so I can take your stuff!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Whatcha gonna do? Huh? Whatcha gonna do?"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Gonna split your belly like an old woman's purse!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Gonna rip you... open!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"You'll be so much easier to rob when you're dead..."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Tell you what. You start running so I can stab you in the back."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Can't wait to count out your coin..."
+
+Message: 1031
+<ce>You hear someone say : 
+<ce>
+<ce>"You shall make a fine corpse, %ra!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"First, you die. Then I make you live again!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Death for the Death God!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Fear not, %ra. Death will not be your end."
+
+Message: 1032
+<ce>You hear someone say : 
+<ce>
+<ce>"Come. Come and face the children of Mauloch..."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"First you... then all of ____dgn_!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"For Orsinium!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"The Orcs will reclaim what is rightfully ours!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Orsinium forever!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Remember Orsinium!"
+
+Message: 1033
+<ce>You sense vibrations beneath your feet.
+<ce>They appear as in rythm, like footsteps...
+<--->
+<ce>A loud scream pierces the silence :
+<ce>
+<ce>"Ayarg garag gar!"
+<--->
+<ce>A loud scream pierces the silence as
+<ce>three tall figures run toward you...
+
+
+Message: 1034
+<ce>You notice a sapling that starts moving
+<ce>towards you...
+<--->
+<ce>A bear and a rat, who were resting beside
+<ce>a tree, suddenly stand up and stare at
+<ce>you. The tree starts moving...
+
+Message: 1035
+<ce>A piercing screech breaks the silence.
+<ce>What at first seem to be birds are
+<ce>actually harpies flying towards you...
+<--->
+<ce>You see a shadow from a bird circling
+<ce>around you. Then one more. You notice
+<ce>those are not birds, but harpies
+<ce>circling their prey...
+
+Message: 1036
+<ce>Ohh... but I will have your blood...
+<--->
+<ce>My thirst will be sated...
+<--->
+<ce>Oh, I can smell your blood...
+<--->
+<ce>Bleed for me, mortal!
+<--->
+<ce>Just a taste!
+<--->
+<ce>Hssssss!
+<--->
+<ce>Is that your best, mortal?
+<--->
+<ce>Bleed and die!
+<--->
+<ce>Just a taste...
+<--->
+<ce>You're mine, mortal!
+<--->
+<ce>You dare to interfere with me?
+<--->
+<ce>I knew I smelled mortal blood!
+<--->
+<ce>Now your blood is mine!
+<--->
+<ce>Pah, your blood is foul.
+<--->
+<ce>Soon... soon your blood will be mine...
+<--->
+<ce>Your blood calls me...
+<--->
+<ce>Why fight me? Your blood is already mine.
+<--->
+<ce>Your kind are finished.
+<--->
+<ce>Mortal fool, you can't stop us.
+<--->
+<ce>We own the night, fool.
+<--->
+<ce>The night belongs to us.
+<--->
+<ce>The sun cannot protect you any more!
+<--->
+<ce>Behold the power of Night!
+<--->
+<ce>Stop struggling. I'll give you a swift and beautiful death.
+<--->
+<ce>I'll drink you dry, mortal!
+<--->
+<ce>I love it when dinner walks right into my arms.
+<--->
+<ce>The prey is here!
+<--->
+<ce>You're mine!
+<--->
+<ce>Die!
+<--->
+<ce>No... my blood is strong...
+<--->
+<ce>Death is nothing to me...
+<--->
+<ce>I do not fear death.
+<--->
+<ce>Never... not yet...
+
+Message: 1037
+<ce>You hear someone say : 
+<ce>
+<ce>"Behold my power!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"The elements are mine to command!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"You cannot even conceive of the power I wield..."
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Fire, frost, or lightning - you will suffer at my hands!"
+<--->
+<ce>You hear someone say : 
+<ce>
+<ce>"Don't you see? I am master of the arcane!"
+
+Message: 1040
+<ce>You have slain =foe1_, leader of the
+<ce>bandits occupying ___dgn_.
+
+Message: 1041
+<ce>You have slain =foe2_, the necromancer
+<ce>responsible for rising the dead of
+<ce>___dgn2_.
+
+Message: 1042
+<ce>You have slain =foe3_, the Orc
+<ce>leading the war party at ___dgn_.
+
+Message: 1043
+<ce>You have slain =foe4_, chief
+<ce>of the giants occupying ___dgn3_.
+
+Message: 1044
+<ce>You have slain =foe5_,
+<ce>matriarch of the harpy flock
+<ce>nesting in ___dgn3_.
+
+Message: 1045
+<ce>You have slain =foe6_,
+<ce>bane of the woodcutters and laborers
+<ce>around ___dgn3_.
+
+Message: 1046
+<ce>You have slain =foe7_, the vampire
+<ce>lord dwelling in ___dgn4_.
+
+Message: 1047
+<ce>You have slain =foe8_, leader of the
+<ce>warlocks holed up in ___dgn5_. 
+
+Message: 1050
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to kill the bandit leader
+<ce>at ___dgn_.
+
+Message: 1051
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the undead
+<ce>at ___dgn2_.
+
+Message: 1052
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the Orc
+<ce>threat at ___dgn_.
+
+Message: 1053
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the giant
+<ce>threat at ___dgn3_.
+
+Message: 1054
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the harpy
+<ce>threat at ___dgn3_.
+
+Message: 1055
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the spriggan
+<ce>threat at ___dgn3_.
+
+Message: 1056
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the vampire
+<ce>threat at ___dgn4_.
+
+Message: 1057
+<ce>It has been =timer_ days since you were tasked
+<ce>by the Fighters Guild to dispose of the wizard
+<ce>threat at ___dgn5_.
+
+QBN:
+Item _reward_ gold
+
+Person _questgiver_ group Questor
+
+Place _dgn_ remote keep
+Place _dgn2_ remote graveyard
+Place _dgn3_ remote ruin
+Place _dgn4_ remote dungeon9
+Place _dgn5_ remote labyrinth
+
+Foe _foe1_ is Barbarian
+Foe _foe2_ is Sorcerer
+Foe _foe3_ is Orc_warlord
+Foe _foe4_ is Giant
+Foe _foe5_ is Harpy
+Foe _foe6_ is Spriggan
+Foe _foe7_ is Vampire
+Foe _foe8_ is Mage
+Foe _backup1a_ is Warrior
+Foe _backup1b_ is Archer
+Foe _backup2a_ is Skeletal_warrior
+Foe _backup2b_ is Ghost
+Foe _backup3a_ is Orc
+Foe _backup3b_ is Orc
+Foe _backup4a_ is Giant
+Foe _backup4b_ is Giant
+Foe _backup5a_ is Harpy
+Foe _backup5b_ is Harpy
+Foe _backup6a_ is Giant_rat
+Foe _backup6b_ is Grizzley_bear
+Foe _backup8a_ is Flesh_atronach
+
+Clock _timer_ 25.00:00 35.00:00
+
+variable _atdgn_
+variable _atdgn2_
+variable _atdgn3_
+variable _atdgn5_
+variable _timer_
+
+--	Quest start-up:
+	start timer _timer_
+    pc at _dgn_ set _atdgn_
+    pc at _dgn2_ set _atdgn2_
+    pc at _dgn3_ set _atdgn3_
+    pc at _dgn5_ set _atdgn5_
+    pick one of _loc1_ _loc2_ _loc3_ _loc4_ _loc5_ _loc6_ _loc7_ _loc8_
+
+_loc1_ task:
+	log 1010 step 0
+    reveal _dgn_
+    say 1020
+
+_loc2_ task:
+	log 1011 step 0
+    reveal _dgn2_
+    say 1021
+
+_loc3_ task:
+	log 1012 step 0
+    reveal _dgn_
+    say 1022
+
+_loc4_ task:
+	log 1013 step 0
+    reveal _dgn3_
+    say 1023
+
+_loc5_ task:
+	log 1014 step 0
+    reveal _dgn3_
+    say 1024
+
+_loc6_ task:
+	log 1015 step 0
+    reveal _dgn3_
+    say 1025
+
+_loc7_ task:
+	log 1016 step 0
+    reveal _dgn4_
+    say 1026
+    place foe _foe7_ at _dgn4_
+
+_loc8_ task:
+	log 1017 step 0
+    reveal _dgn5_
+    say 1027
+
+_spawn1_ task:
+    when _atdgn_ and _loc1_
+    send _foe1_ every 00 minutes 1 times with 100% success msg 1030
+    send _backup1a_ every 00 minutes 1 times with 100% success
+    send _backup1b_ every 00 minutes 1 times with 100% success
+
+_spawn2_ task:
+    when _atdgn2_ and _loc2_
+    send _foe2_ every 00 minutes 1 times with 100% success msg 1031
+    send _backup2a_ every 00 minutes 1 times with 100% success
+    send _backup2b_ every 00 minutes 1 times with 100% success
+
+_spawn3_ task:
+    when _atdgn_ and _loc3_
+    send _foe3_ every 00 minutes 1 times with 100% success msg 1032
+    send _backup3a_ every 00 minutes 1 times with 100% success
+    send _backup3b_ every 00 minutes 1 times with 100% success
+
+_spawn4_ task:
+    when _atdgn3_ and _loc4_
+    send _foe4_ every 00 minutes 1 times with 100% success msg 1033
+    send _backup4a_ every 00 minutes 1 times with 100% success
+    send _backup4b_ every 00 minutes 1 times with 100% success
+
+_spawn5_ task:
+    when _atdgn3_ and _loc5_
+    send _foe5_ every 00 minutes 1 times with 100% success msg 1035
+    send _backup5a_ every 00 minutes 1 times with 100% success
+    send _backup5b_ every 00 minutes 1 times with 100% success
+
+_spawn6_ task:
+    when _atdgn3_ and _loc6_
+    send _foe6_ every 00 minutes 1 times with 100% success msg 1034
+    send _backup6a_ every 00 minutes 1 times with 100% success
+    send _backup6b_ every 00 minutes 1 times with 100% success
+
+_spawn8_ task:
+    when _atdgn5_ and _loc8_
+    send _foe8_ every 00 minutes 1 times with 100% success msg 1037
+    send _backup8a_ every 00 minutes 1 times with 100% success
+
+_injured7_ task:
+    injured _foe7_
+    say 1036
+
+_slain1_ task:
+    killed _foe1_  
+    say 1040
+
+_slain2_ task:
+    killed _foe2_  
+    say 1041
+
+_slain3_ task:
+    killed _foe3_  
+    say 1042
+
+_slain4_ task:
+    killed _foe4_  
+    say 1043
+
+_slain5_ task:
+    killed _foe5_  
+    say 1044
+
+_slain6_ task:
+    killed _foe6_  
+    say 1045
+
+_slain7_ task:
+    killed _foe7_  
+    say 1046
+
+_slain8_ task:
+    killed _foe8_  
+    say 1047
+
+_slain_ task:
+    when _slain1_ or _slain2_ or _slain3_ or _slain4_ or _slain5_ or _slain6_ or _slain7_ or _slain8_
+
+_qgiverclicked_ task:
+    clicked npc _questgiver_
+
+_success_ task:
+    when _qgiverclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _qgiverclicked_ and not _slain_
+    clear _qgiverclicked_ _clearclick_
+
+_fail1_ task:
+    when _timer_ and _loc1_
+    say 1050
+    end quest
+
+_fail2_ task:
+    when _timer_ and _loc2_
+    say 1051
+    end quest
+
+_fail3_ task:
+    when _timer_ and _loc3_
+    say 1052
+    end quest
+
+_fail4_ task:
+    when _timer_ and _loc4_
+    say 1053
+    end quest
+
+_fail5_ task:
+    when _timer_ and _loc5_
+    say 1054
+    end quest
+
+_fail6_ task:
+    when _timer_ and _loc6_
+    say 1055
+    end quest
+
+_fail7_ task:
+    when _timer_ and _loc7_
+    say 1056
+    end quest
+
+_fail8_ task:
+    when _timer_ and _loc8_
+    say 1057
+    end quest

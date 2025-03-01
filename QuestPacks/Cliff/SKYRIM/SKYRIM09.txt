@@ -1,0 +1,294 @@
+Quest: SKYRIM09
+DisplayName: Hired Muscle
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>            We've gotten a letter about someone needing
+<ce>            some muscle up in __loc_. Can
+<ce>            I count on you?
+
+RefuseQuest:  [1001]
+<ce>            This work isn't for everyone. Maybe you're
+<ce>            more cut out for those snowberries up in
+<ce>            __loc2_.
+<--->
+<ce>            This isn't a guild of cowards. I'll find
+<ce>            someone more agreeable, I'm sure.
+<--->
+<ce>            Unfortunate, but someone else will take
+<ce>            care of it.
+
+AcceptQuest:  [1002]
+<ce>            I don't know what the fight is about, and
+<ce>            that's not our business anyway. I just need
+<ce>            you to go out there, look tough, and scare
+<ce>            this milk drinker, _dummy_,
+<ce>            into submission. No more than that. I don't
+<ce>            want to hear about a killing, understand?
+<ce>            Get that done in =timer_ days and try not
+<ce>            to get carried away.
+<--->
+<ce>            I don't know what the fight is about, and
+<ce>            that's not our business anyway. I just need
+<ce>            you to go out there, look tough, and scare
+<ce>            this milk drinker, _dummy_,
+<ce>            into submission. No more than that. I don't
+<ce>            want to hear about a killing, understand?
+<ce>            Go. I'll give you =timer_ days. Bring honor
+<ce>            to yourself, and the Fighters Guild.
+<--->
+<ce>            I don't know what the fight is about, and
+<ce>            that's not our business anyway. I just need
+<ce>            you to go out there, look tough, and scare
+<ce>            this milk drinker, _dummy_,
+<ce>            into submission. No more than that. I don't
+<ce>            want to hear about a killing, understand?
+<ce>            Get to it then. You have =timer_ days to do
+<ce>            this.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>            Kind of fun to push people around sometimes,
+<ce>            isn't it. Good work, %lev.
+<--->
+<ce>            You seem to have a knack for this kind of
+<ce>            thing. I'll make sure people in charge know.
+<--->
+<ce>            I figured you had it in you. Nicely done.
+
+RumorsDuringQuest:   [1005]
+
+
+RumorsPostFailure:   [1006]
+
+
+RumorsPostSuccess:   [1007]
+
+
+QuestorPostsuccess:  [1008]
+                
+
+QuestorPostfailure:  [1009]
+                
+
+Message: 1010
+%qdt
+_dummy_ here in __loc_ has
+been harassing citizens. The Fighters
+Guild has been contacted to calm %g2 down,
+somehow. Some roughing up may be necessary
+be necessary. I have =timer_ days to take
+care of it.
+
+Message: 1020
+<ce>You looking for trouble too, %ra?
+<ce>Come on. Let's see what you're made of.
+<--->
+<ce>Another one? Hah! You want a real
+<ce>fight, eh?
+
+Message: 1030
+<ce>You hear a patron say : 
+<ce>
+<ce>"Looks slow to me."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"I could take both of them."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"By %god. A fight!"
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"This should be interesting."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"Those fools are actually fighting!"
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"My money's on the big one."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"%oth! Another fight."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"This should be good."
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"Twelve gold on the big one!"
+<--->
+<ce>You hear a patron say : 
+<ce>
+<ce>"Drive that %ra to the ground!
+<ce>Come on!"
+
+Message: 1040
+<ce>The innkeeper, indifferent to _dummy_'s demise,
+<ce>says :
+<ce>
+<ce>"Remind me not to make you angry."
+<--->
+<ce>The innkeeper, indifferent to _dummy_'s demise,
+<ce>says :
+<ce>
+<ce>"Well... that was an unpleasant bit of business.
+<--->
+<ce>The innkeeper, indifferent to _dummy_'s demise,
+<ce>says :
+<ce>
+<ce>"What's done is done."
+<--->
+<ce>The innkeeper, indifferent to _dummy_'s demise,
+<ce>says :
+<ce>
+<ce>"Guess %g deserved it.
+
+Message: 1050
+<ce>Damn it. Why'd you have to walk into %cn?
+<ce>I'll stand down, okay?
+<--->
+<ce>Now that's what I call a powerful hit.
+<ce>You got me. I'll stop bothering the fools
+<ce>in %cbd.
+<--->
+<ce>Wait, I can still fight. No, no I can't.
+<ce>%oth. Sorry 'bout that, innkeeper.
+<ce>I'll just relax, okay?
+<--->
+<ce>Damn %ra. Why couldn't you just mind
+<ce>your own business? I'll stop pestering
+<ce>those bastards here.
+<--->
+<ce>You're tougher than you look. You got me,
+<ce>fair and square. I'll stand down.
+
+Message: 1060
+<ce>Dead!? %oth, %lev. What did I tell you? 
+<ce>I'm cutting your pay for this job. Be more careful
+<ce>next time. This isn't a game.
+
+Message: 1070
+<ce>=timer_ days have passed since you were
+<ce>tasked by the Fighters Guild to calm
+<ce>down _dummy_.
+
+QBN:
+Item _reward_ gold
+
+Person _questgiver_ group Questor male
+Person _dummy_ group Resident2
+
+Place _loc_ local tavern
+Place _loc2_ remote hamlet
+
+Foe _foe1_ is Warrior
+Foe _foe2_ is Spellsword
+Foe _foe3_ is Bard
+Foe _foe4_ is Acrobat
+Foe _foe5_ is Barbarian
+
+Clock _timer_ 2.00:00 4.00:00
+
+variable _enemy1_
+variable _enemy2_
+variable _enemy3_
+variable _enemy4_
+variable _enemy5_
+
+--	Quest start-up:
+	start timer _timer_
+    place npc _dummy_ at _loc_
+	log 1010 step 0
+    pick one of _enemy1_ _enemy2_ _enemy3_ _enemy4_ _enemy5_
+
+_dummyclicked_ task:
+    clicked npc _dummy_
+    say 1020
+
+_spawnfoe1_ task:
+    when _dummyclicked_ and _enemy1_
+    hide npc _dummy_
+    place foe _foe1_ at _loc_
+    say 1030
+
+_spawnfoe2_ task:
+    when _dummyclicked_ and _enemy2_
+    hide npc _dummy_
+    place foe _foe2_ at _loc_
+    say 1030
+
+_spawnfoe3_ task:
+    when _dummyclicked_ and _enemy3_
+    hide npc _dummy_
+    place foe _foe3_ at _loc_
+    say 1030
+
+_spawnfoe4_ task:
+    when _dummyclicked_ and _enemy4_
+    hide npc _dummy_
+    place foe _foe4_ at _loc_
+    say 1030
+
+_spawnfoe5_ task:
+    when _dummyclicked_ and _enemy5_
+    hide npc _dummy_
+    place foe _foe5_ at _loc_
+    say 1030
+
+_injured_ task:
+    injured _foe1_
+    injured _foe2_
+    injured _foe3_
+    injured _foe4_
+    injured _foe5_
+    say 1050
+
+_restrain_ task:
+    when _injured_
+    restrain foe _foe1_
+    restrain foe _foe2_
+    restrain foe _foe3_
+    restrain foe _foe4_
+    restrain foe _foe5_
+
+_slain_ task:
+    killed _foe1_
+    killed _foe2_
+    killed _foe3_
+    killed _foe4_
+    killed _foe5_
+    say 1040
+
+_resolution_ task:
+    when _injured_ or _slain_
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_success_ task:
+    when _qgclicked_ and _injured_ and not _slain_
+    give pc _reward_
+    end quest
+
+_fail_ task:
+    when _qgclicked_ and _slain_
+    say 1060
+    end quest
+
+_clearqggclicked_ task:
+    when _qgclicked_ and not _resolution_
+    clear _qgclicked_ _clearqggclicked_
+ 
+_timer_ task:
+    say 1070
+    end quest

@@ -1,0 +1,126 @@
+Quest: SKYRIM02A
+DisplayName: Bounty - Dragonling
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+<ce>                    Greetings, %ra. Some of the %rt's
+<ce>                    men came by and left this bounty letter.
+<ce>                    It concerns a dragonling causing trouble
+<ce>                    in %reg. Sounds dangerous. 
+<ce>                    Do you want to see it?
+<--->
+<ce>                    Did you hear? A dragonling burned a farm
+<ce>                    in %reg's countryside! The %rt
+<ce>                    put a bounty on its head. I have it here.
+<ce>                    Would you like to take a look?
+
+RefuseQuest:  [1001]
+<ce>                    I wonder who will be brave enough to
+<ce>                    face such a powerful monster. Anyway,
+<ce>                    is there anything I can help you with?
+<--->
+<ce>                    Can't blame you. That sounds way too dangerous.
+<ce>                    I'm sure some dragonling hunter will show up.
+
+AcceptQuest:  [1002]
+<ce>                    Here. Take a look at this.
+
+QuestFail:  [1003]
+<ce>            
+
+QuestComplete:  [1004]
+<ce>                    The dragonling is dead? Excellent. You've
+<ce>                    done us a great service. Here is your reward. 
+<--->
+<ce>                    The good people have you to thank. Killing
+<ce>                    a dragonling is no small feat. Good work,
+<ce>                    %ra. Here's your gold.
+
+RumorsDuringQuest:   [1005]
+Did you hear? The %ln Orchard has been burned to cinders! The work of a dragongling they say!
+<--->
+A traveler told me he saw a dragonling flying away and carrying a sheep.
+
+RumorsPostSuccess:   [1007]
+Many of us cannot believe it. A %ra hunted down the dragonling, the terror of %reg! I'm sure it's still around. Can't trust anything the %rt says.
+<--->
+Someone at the tavern told me the dragonling that terrorized %reg's countryside has been killed by a brave %ra. Impressive!
+
+QuestorPostsuccess:  [1008]
+Ah, %reg's dragonling hunter. How can I help?
+
+
+Message: 1010
+%qdt
+The %rt of %reg has put a
+bounty on a dragonling terrorizing
+the countryside. It has made its
+home in __dgn_. _steward_
+in __palace_'s Palace is the
+one to see, should I decide to
+collect my bounty.
+
+Message: 1020
+<ce>BOUNTY
+<ce>
+<ce>
+By order of %rn, %rt of %reg:
+<ce>
+To all able bodied and fearless men and women
+of %reg. The dragonling located
+in __dgn_ has been carrying off
+livestock, and terrorizing citizens and visitors.
+<ce>
+Refer to the directions to __dgn_ on the
+back of this notice.
+<ce>
+A handsome reward will be offered to anyone who
+kills it.
+<ce>
+--_steward_
+  __palace_'s Palace
+
+Message: 1030
+<ce>The dragonling, terror of %reg, has been killed.
+
+
+QBN:
+Item _reward_ gold
+Item _bounty_ letter used 1020
+
+Person _steward_ group Resident4
+
+Place _dgn_ remote dungeon14
+Place _palace_ remote palace
+
+Foe _dragonling_ is Dragonling
+
+Clock _timer_ 70.00:00
+
+--	Quest start-up:
+	start timer _timer_
+	log 1010 step 0
+    place npc _steward_ at _palace_
+    get item _bounty_
+    reveal _dgn_
+    place foe _dragonling_ at _dgn_
+
+_slain_ task:
+    killed _dragonling_ 
+    say 1030
+
+_stewardclicked_ task:
+    clicked npc _steward_
+
+_success_ task:
+    when _stewardclicked_ and _slain_
+    give pc _reward_
+    end quest
+
+_clearclick_ task:
+    when _stewardclicked_ and not _slain_
+    clear _stewardclicked_ _clearclick_
+
+_timer_ task:
+    end quest

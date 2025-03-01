@@ -1,0 +1,54 @@
+{
+    "Contributes": {
+        "QuestLists": [
+            "SKYRIM"
+        ],
+        "LooseQuestsList": [
+            "SKYRIM01A",
+            "SKYRIM07",
+            "SKYRIM01B",
+            "SKYRIM03B",
+            "SKYRIM14",
+            "SKYRIM05",
+            "SKYRIM02A",
+            "SKYRIM09",
+            "SKYRIM12",
+            "SKYRIM04B",
+            "SKYRIM02B",
+            "SKYRIM03A",
+            "SKYRIM06",
+            "SKYRIM04A",
+            "SKYRIM13",
+            "SKYRIM11",
+            "SKYRIM10",
+            "SKYRIM08"
+        ]
+    },
+    "ModTitle": "Skyrim Adventures",
+    "ModVersion": "1.0.1",
+    "ModAuthor": "Cliffworms",
+    "DFUnity_Version": "1.1.1",
+    "ModDescription": "Adds 13 new quests based on Skyrim's radiant quests.",
+    "GUID": "dfcd3693-b35b-401e-982e-cd4933a44003",
+    "Files": [
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM01A.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM07.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM01B.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/QuestList-SKYRIM.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM03B.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM14.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM05.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM02A.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM09.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM12.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM04B.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM02B.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM03A.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM06.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM04A.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM13.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM11.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM10.txt",
+        "Assets/Game/Mods/SkyrimsAdventures/QuestPacks/Cliff/SKYRIM/SKYRIM08.txt"
+    ]
+}
